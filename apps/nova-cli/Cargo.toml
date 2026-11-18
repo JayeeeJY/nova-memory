@@ -1,0 +1,24 @@
+[package]
+name = "nova-cli"
+default-run = "nova"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license = "AGPL-3.0-only"
+publish = false
+
+[[bin]]
+name = "nova"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+nova-core = { path = "../../crates/nova-core" }
+serde.workspace = true
+serde_json.workspace = true
+zeroize.workspace = true
+
+[[bin]]
+name = "nova-migrate"
+path = "src/migrate.rs"

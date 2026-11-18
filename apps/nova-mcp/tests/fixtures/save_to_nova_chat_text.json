@@ -1,0 +1,29 @@
+{
+  "user_requested_save": true,
+  "request_id": "unified_chat_text_001",
+  "host": "chatgpt",
+  "surface": "chat_text",
+  "capture_fidelity": "f1_ai_digest",
+  "source_ref": "session:synthetic-001",
+  "title": "统一保存合同",
+  "memory_type": "decision",
+  "summary": "近期先验证可信记忆闭环。",
+  "session_digest": "用户决定先验证保存、审核与复用；暂不扩展第二 Host。",
+  "key_points": [
+    "摘要不是完整转写"
+  ],
+  "decisions": [
+    "先验证可信记忆闭环"
+  ],
+  "rationales": [
+    "先验证长期效用"
+  ],
+  "open_questions": [
+    "后台 Voice 是否可重复"
+  ],
+  "next_steps": [
+    "审核待确认草稿"
+  ],
+  "privacy_level": "private",
+  "observed_at": "2026-10-07T08:00:00Z"
+}

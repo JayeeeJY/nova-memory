@@ -1,0 +1,17 @@
+/target/
+/.nova/
+**/mcp-connections/
+/eval/private/
+/eval/raw/
+*.chatgpt-export.json
+*.chatgpt-export.zip
+conversations.json
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.key
+.DS_Store
+/.artifacts/
+
+/apps/nova-desktop/.build/
+**/__pycache__/

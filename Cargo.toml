@@ -1,0 +1,44 @@
+[workspace]
+members = [
+    "crates/nova-core",
+    "crates/nova-model-runtime",
+    "apps/nova-cli",
+    "apps/nova-mcp",
+    "apps/nova-review",
+]
+resolver = "3"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.94"
+authors = ["Nova Memory"]
+
+[workspace.dependencies]
+anyhow = "1.0"
+axum = "0.8"
+chacha20poly1305 = "0.10"
+clap = { version = "4.5", features = ["derive"] }
+getrandom = "0.3"
+hex = "0.4"
+hmac = "0.12"
+regex = "1.11"
+rmcp = { version = "3.1.2", features = ["client", "transport-streamable-http-client-reqwest", "transport-streamable-http-server"] }
+rusqlite = { version = "0.37", features = ["bundled"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha2 = "0.10"
+tempfile = "3.20"
+thiserror = "2.0"
+time = { version = "0.3", features = ["formatting", "parsing", "serde"] }
+tokio = { version = "1.47", features = ["macros", "net", "rt-multi-thread", "signal"] }
+tokio-util = "0.7"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid = { version = "1.18", features = ["serde", "v7"] }
+zeroize = { version = "1.8", features = ["derive"] }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = "symbols"

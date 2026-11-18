@@ -1,0 +1,43 @@
+name: 问题反馈
+description: 反馈 Nova Memory 本地版的使用问题
+title: "[问题] "
+body:
+  - type: markdown
+    attributes:
+      value: "请使用合成材料描述问题，并移除私人记忆、密钥与访问凭据。公开问题会被其他人看到。"
+  - type: input
+    id: nova_version
+    attributes:
+      label: Nova Memory 版本或下载包名称
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: 操作系统与设备
+      placeholder: "例如 Apple 芯片 Mac，macOS 版本"
+    validations:
+      required: true
+  - type: input
+    id: ai_client
+    attributes:
+      label: AI 客户端及版本（如适用）
+      placeholder: "例如 Cursor / Codex / Claude / WorkBuddy / ChatGPT / Grok"
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 怎样重现
+      description: "写下操作步骤，可以附最小的合成示例。"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果与实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: 错误提示（如有）
+      description: "移除密钥、凭据、私人材料和个人路径后填写。"
