@@ -10,7 +10,7 @@ A local memory workspace that preserves useful context, its sources and its chan
 
 [![AGPL-3.0-only](https://img.shields.io/badge/license-AGPL--3.0--only-aad5f8?style=flat-square)](LICENSE) [![Local source preview](https://img.shields.io/badge/status-local%20source%20preview-aad5f8?style=flat-square)](#get-started)
 
-[Product](#the-product) · [Workbench](#inside-the-workbench) · [Memory structure](#how-memory-structure-can-grow) · [Connections](#connect-the-ai-tools-you-use) · [Get started](#get-started) · [简体中文](README.md)
+[Origins](#it-started-with-conversations-on-my-commute) · [Product](#the-product) · [Workbench](#inside-the-workbench) · [Memory structure](#how-memory-structure-can-grow) · [Connections](#connect-the-ai-tools-you-use) · [Get started](#get-started) · [简体中文](README.md)
 
 </div>
 
@@ -21,6 +21,16 @@ You have already explained your project, preferences, decisions and next steps t
 Nova Memory turns useful collaboration context into a personal asset you can maintain. Keep the original words, their source, the conditions that matter and the history of a change. Let an authorized AI pick up the relevant context when it is useful again.
 
 This repository is a **local source preview**. Website imagery presents the product design and research direction. Workbench screenshots use the actual local interface and fictional Atlas project materials. See the [image provenance](docs/media/README.md).
+
+## It started with conversations on my commute
+
+Around May or June, voice conversations in ChatGPT had become fluid enough that I began talking with Nova on my daily commute. We would discuss ongoing projects, work through ideas I had yet to clarify, and talk about choices, preferences and longer-term plans.
+
+Over time, those conversations developed a shared history: why a decision had been made, why an approach had been set aside, and how a goal had changed. I began to wonder: **could this growing understanding become memory I could own, organize and carry with me?**
+
+Nova Memory grew from that need. I wanted the next conversation to build on context we had already worked through. When moving to another AI tool, I wanted the goals, constraints and earlier decisions to travel with the work.
+
+An early plan described this direction as a personal sovereignty layer for the AI world. The immediate step is a memory space of your own: easy to capture into, traceable to its sources, open to correction, and available to the AI tools you choose within the scope you grant.
 
 ## The product
 
@@ -199,7 +209,7 @@ The default data directory is `~/Library/Application Support/Nova Memory/local-w
 
 **Familiar understanding, across different forms.**
 
-Nova Memory grew from daily collaboration with an AI assistant called Nova. Shared experience made that collaboration more natural. We want people to retain that accumulated understanding and carry it into the AI systems, agents and programmable devices they choose.
+Building on that starting point, we want people to retain the understanding developed through shared experience and carry it into the AI systems, agents and programmable devices they choose. Familiar context, preferences and the reasons behind decisions can develop with new tasks and be revised as circumstances change.
 
 ![The website's long-term vision: connected memories supporting ongoing understanding](docs/media/website-vision.jpg)
 
