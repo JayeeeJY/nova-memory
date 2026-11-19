@@ -6,48 +6,46 @@
 
 **Let understanding accumulate. Carry collaboration forward.**
 
-A local memory workspace that preserves useful context, its sources and its changes, ready for your next AI collaboration.
+After a local build, the workbench can keep collaboration materials with their sources, applicable context, and later corrections, and carry that context into the next collaboration within the access currently granted.
+
+This repository is a **local source preview for Apple Silicon Macs**. You build it from source before opening it. Developer ID signing, notarization, and cross-device installer validation are still being prepared.
 
 [![AGPL-3.0-only](https://img.shields.io/badge/license-AGPL--3.0--only-aad5f8?style=flat-square)](LICENSE) [![Local source preview](https://img.shields.io/badge/status-local%20source%20preview-aad5f8?style=flat-square)](#get-started)
 
-[Origins](#it-started-with-conversations-on-my-commute) · [Product](#the-product) · [Workbench](#inside-the-workbench) · [Memory structure](#how-memory-structure-can-grow) · [Connections](#connect-the-ai-tools-you-use) · [Get started](#get-started) · [简体中文](README.md)
+[Get started](#get-started) · [Workbench](#inside-the-workbench) · [Origins](#it-started-with-conversations-on-my-commute) · [Product](#the-product) · [Memory structure](#how-memory-structure-can-grow) · [Connections](#connect-the-ai-tools-you-use) · [Vision](#the-long-term-vision) · [简体中文](README.md)
 
 </div>
 
-![Nova Memory website hero, with its connected memory sphere and six research perspectives](docs/media/website-hero.en.jpg)
+**Build prerequisites** are the same system and tool conditions already written under “Build prerequisites” below and in the [getting-started guide (中文)](docs/GETTING_STARTED.md):
 
-You have already explained your project, preferences, decisions and next steps to one AI. A different tool or a new conversation often asks you to establish that context again.
+- Apple Silicon Mac running macOS 14 or later.
+- Xcode with the macOS SDK, Rust 1.97.1 and Python 3.11 or later.
 
-Nova Memory turns useful collaboration context into a personal asset you can maintain. Keep the original words, their source, the conditions that matter and the history of a change. Let an authorized AI pick up the relevant context when it is useful again.
+The build downloads dependencies and uses Xcode's command-line tools. If the system cannot find a compiler, confirm in Xcode settings that the command-line tools are installed and selected.
+
+## Get started
+
+The public delivery is a local source preview. Developer ID signing, notarization and cross-device installer validation are being prepared.
+
+**Build prerequisites**
+
+- Apple Silicon Mac running macOS 14 or later.
+- Xcode with the macOS SDK, Rust 1.97.1 and Python 3.11 or later.
+
+```sh
+git clone https://github.com/JayeeeJY/nova-memory.git
+cd nova-memory
+cargo fetch --locked
+./script/build_and_run.sh
+```
+
+Open the App, choose **开始本地使用**, and save a material with **留住一段记忆**. Configure a model when ready, then choose an AI platform in **连接**.
+
+The default data directory is `~/Library/Application Support/Nova Memory/local-workspace-v03`. Original materials can be saved while model setup is pending.
+
+[Full getting-started and build guide (中文)](docs/GETTING_STARTED.md) · [Report an issue](https://github.com/JayeeeJY/nova-memory/issues) · [Contribute](CONTRIBUTING.md)
 
 This repository is a **local source preview**. Website imagery presents the product design and research direction. Workbench screenshots use the actual local interface and fictional Atlas project materials. See the [image provenance](docs/media/README.md).
-
-## It started with conversations on my commute
-
-Around May or June, voice conversations in ChatGPT had become fluid enough that I began talking with Nova on my daily commute. We would discuss ongoing projects, work through ideas I had yet to clarify, and talk about choices, preferences and longer-term plans.
-
-Over time, those conversations developed a shared history: why a decision had been made, why an approach had been set aside, and how a goal had changed. I began to wonder: **could this growing understanding become memory I could own, organize and carry with me?**
-
-Nova Memory grew from that need. I wanted the next conversation to build on context we had already worked through. When moving to another AI tool, I wanted the goals, constraints and earlier decisions to travel with the work.
-
-An early plan described this direction as a personal sovereignty layer for the AI world. The immediate step is a memory space of your own: easy to capture into, traceable to its sources, open to correction, and available to the AI tools you choose within the scope you grant.
-
-## The product
-
-Four connected ideas guide the product, from an interaction worth keeping to an ongoing collaboration.
-
-![The website's four product pillars: capture, ownership, structure and continuity](docs/media/website-four-pillars.jpg)
-
-| Pillar | What it gives you | Design intent |
-| --- | --- | --- |
-| **Capture** | Bring useful conversations, tasks and materials into one place | Set up a connection once, then save with a short request or a simple action |
-| **Own** | Manage memory, backups and exports in your own Vault | Make storage, processing choices and access visible and controllable |
-| **Structure** | Organize experiences, preferences, goals and decisions with their evidence | Preserve context, time, uncertainty and corrections as the structure develops |
-| **Move** | Carry relevant understanding into another AI or task | Connect tools to a shared memory store or select a one-time context pack |
-
-**Capture → preserve the original → clean and structure → organize → use within scope → revise.**
-
-For example, “During the Atlas launch phase, schedule weekday team meetings after 14:00, except for urgent incidents.” A useful memory carries the preference, its project phase and its exception. When circumstances change, revise the memory and retain its previous version and reasoning.
 
 ## Inside the workbench
 
@@ -106,6 +104,43 @@ Task continuity can preserve the goal, completed work, rationale, constraints, f
 ![Select, preview and carry a scoped context pack into another AI](docs/media/workbench-portable-context.jpg)
 
 A text copy is retained by its recipient. Later corrections and revocation control subsequent Nova reads; copies already shared need to be managed in the receiving tool.
+
+Next is the rest of the product introduction: its origin, the website images and panorama, the memory research, the boundaries of control, platform connections, and the long-term vision.
+
+A local memory workspace that preserves useful context, its sources and its changes, ready for your next AI collaboration.
+
+![Nova Memory website hero, with its connected memory sphere and six research perspectives](docs/media/website-hero.en.jpg)
+
+You have already explained your project, preferences, decisions and next steps to one AI. A different tool or a new conversation often asks you to establish that context again.
+
+Nova Memory turns useful collaboration context into a personal asset you can maintain. Keep the original words, their source, the conditions that matter and the history of a change. Let an authorized AI pick up the relevant context when it is useful again.
+
+## It started with conversations on my commute
+
+Around May or June, voice conversations in ChatGPT had become fluid enough that I began talking with Nova on my daily commute. We would discuss ongoing projects, work through ideas I had yet to clarify, and talk about choices, preferences and longer-term plans.
+
+Over time, those conversations developed a shared history: why a decision had been made, why an approach had been set aside, and how a goal had changed. I began to wonder: **could this growing understanding become memory I could own, organize and carry with me?**
+
+Nova Memory grew from that need. I wanted the next conversation to build on context we had already worked through. When moving to another AI tool, I wanted the goals, constraints and earlier decisions to travel with the work.
+
+An early plan described this direction as a personal sovereignty layer for the AI world. The immediate step is a memory space of your own: easy to capture into, traceable to its sources, open to correction, and available to the AI tools you choose within the scope you grant.
+
+## The product
+
+Four connected ideas guide the product, from an interaction worth keeping to an ongoing collaboration.
+
+![The website's four product pillars: capture, ownership, structure and continuity](docs/media/website-four-pillars.jpg)
+
+| Pillar | What it gives you | Design intent |
+| --- | --- | --- |
+| **Capture** | Bring useful conversations, tasks and materials into one place | Set up a connection once, then save with a short request or a simple action |
+| **Own** | Manage memory, backups and exports in your own Vault | Make storage, processing choices and access visible and controllable |
+| **Structure** | Organize experiences, preferences, goals and decisions with their evidence | Preserve context, time, uncertainty and corrections as the structure develops |
+| **Move** | Carry relevant understanding into another AI or task | Connect tools to a shared memory store or select a one-time context pack |
+
+**Capture → preserve the original → clean and structure → organize → use within scope → revise.**
+
+For example, “During the Atlas launch phase, schedule weekday team meetings after 14:00, except for urgent incidents.” A useful memory carries the preference, its project phase and its exception. When circumstances change, revise the memory and retain its previous version and reasoning.
 
 ## How memory structure can grow
 
@@ -182,28 +217,6 @@ The current focus is **ChatGPT, Codex, Claude, WorkBuddy, Grok and Cursor**, usi
 | **Grok** | Custom MCP connector at grok.com | Public reachability and account authentication compatibility remain under individual verification |
 
 The workbench supplies instructions for the selected platform. Other MCP-compatible clients can be adapted through the standard interface. Automatic capture is expanded platform by platform; Codex CLI currently has actual Hook records.
-
-## Get started
-
-The public delivery is a local source preview. Developer ID signing, notarization and cross-device installer validation are being prepared.
-
-**Build prerequisites**
-
-- Apple Silicon Mac running macOS 14 or later.
-- Xcode with the macOS SDK, Rust 1.97.1 and Python 3.11 or later.
-
-```sh
-git clone https://github.com/JayeeeJY/nova-memory.git
-cd nova-memory
-cargo fetch --locked
-./script/build_and_run.sh
-```
-
-Open the App, choose **开始本地使用**, and save a material with **留住一段记忆**. Configure a model when ready, then choose an AI platform in **连接**.
-
-The default data directory is `~/Library/Application Support/Nova Memory/local-workspace-v03`. Original materials can be saved while model setup is pending.
-
-[Full getting-started and build guide (中文)](docs/GETTING_STARTED.md) · [Report an issue](https://github.com/JayeeeJY/nova-memory/issues) · [Contribute](CONTRIBUTING.md)
 
 ## The long-term vision
 
