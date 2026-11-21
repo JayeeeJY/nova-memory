@@ -20,11 +20,21 @@ You have already explained your project, preferences, decisions and next steps t
 
 Nova Memory turns useful collaboration context into a personal asset you can maintain. Keep the original words, their source, the conditions that matter and the history of a change. Let an authorized AI pick up the relevant context when it is useful again.
 
-This repository is a **local source preview**. All visuals use English. The website hero presents the design direction; diagrams explain product mechanisms, and the animation illustrates memory accumulation. Diagrams and animation are conceptual, rather than UI recordings. See the [image provenance](docs/media/README.md).
+This repository is a **local source preview**. Both README editions use English visuals. Website sections show the design and research direction; the horizontal animation explains capture, structuring and scoped reuse, while the memory-sphere animation is a local render of the English website. Neither animation is a recording of a live personal Vault. See the [image provenance](docs/media/README.md).
+
+## It started with conversations on my commute
+
+Nova is my AI voice assistant. Conversations on my commute became a place to discuss products, work, investing and everyday life. Ideas for Awesome Stock, Atom Awareness, Nova Digital Marketing Platform and Intelligence Hub developed through those conversations and continued at the computer.
+
+As we kept working together, she became more familiar with the background to these projects and choices. Nova began to feel like a personal Jarvis. Yet the context remained scattered across platforms and conversations. Moving to Cursor or another research tool meant explaining earlier decisions, failed approaches and unresolved questions again.
+
+Nova Memory grew from that need. It is Atom Awareness's second product line: keep a lasting, maintainable record of shared experience, so a familiar companion can continue working across AI platforms and, eventually, devices.
 
 ## The product
 
 Four connected ideas guide the product, from an interaction worth keeping to an ongoing collaboration.
+
+![Capture, own, structure and move: the English website product overview](docs/media/website-four-pillars.jpg)
 
 | Pillar | What it gives you | Design intent |
 | --- | --- | --- |
@@ -33,23 +43,13 @@ Four connected ideas guide the product, from an interaction worth keeping to an 
 | **Structure** | Organize experiences, preferences, goals and decisions with their evidence | Preserve context, time, uncertainty and corrections as the structure develops |
 | **Move** | Carry relevant understanding into another AI or task | Connect tools to a shared memory store or select a one-time context pack |
 
-![Capture, own, structure and continue](docs/media/memory-workflow.png)
-
 Selected content arrives through MCP connectors or plugins; supported Hook events can also send material to the capture interface. Originals and provenance are stored in the local Vault before asynchronous extraction of conditions, relationships and versions. Authorization is checked before retrieval, then scoped context is delivered through MCP or a Context Pack. A shared memory store does not require cloud hosting.
 
-![Cross-AI capture and scoped reuse](docs/media/memory-architecture.png)
+![Cross-AI capture and reuse](docs/media/memory-architecture.gif)
 
-*Architecture illustration. Nodes and links represent accumulation; geometry does not encode real semantic distance. Actual relationships depend on provenance and structure rules. Platform availability is listed below.*
+*Conceptual architecture animation. Nodes and links illustrate accumulation; geometry does not encode real semantic distance. Actual relationships depend on provenance and structure rules. Platform availability is listed below.*
 
 For example, “During the Atlas launch phase, schedule weekday team meetings after 14:00, except for urgent incidents.” A useful memory carries the preference, its project phase and its exception. When circumstances change, revise the memory and retain its previous version and reasoning.
-
-## It started with conversations on my commute
-
-Nova is my AI voice assistant. Conversations on my commute became a place to discuss products, work, investing and everyday life. Ideas for Awesome Stock, Atom Awareness, Nova Digital Marketing Platform and Intelligence Hub developed through those conversations and continued at the computer.
-
-As that shared history grew, Nova began to feel like a personal Jarvis. Yet the context remained scattered across platforms and conversations. Moving to Cursor or another research tool meant explaining earlier decisions, failed approaches and unresolved questions again.
-
-Nova Memory grew from that need. It is Atom Awareness's second product line: keep a lasting, maintainable record of shared experience, so a familiar companion can continue working across AI platforms and, eventually, devices.
 
 ## Inside the workbench
 
@@ -89,6 +89,8 @@ A text copy is retained by its recipient. Later corrections and revocation contr
 
 **NMM · Nova Memory Model** is the research codename for Nova's memory structure work. It explores how episodes, claims, goals and decisions can form traceable, revisable and evolving understanding.
 
+![The English website memory structure concept](docs/media/website-memory-model.jpg)
+
 The product organizes this work into three layers.
 
 ![Original materials, structured memory and ongoing understanding](docs/media/memory-layers.png)
@@ -111,7 +113,7 @@ Some foundations need to remain dependable as the structure evolves.
 Six connected research perspectives extend this foundation.
 
 <p align="center">
-  <img src="docs/media/memory-network.gif" width="640" alt="English conceptual memory sphere">
+  <img src="docs/media/memory-network.gif" width="640" alt="English website memory sphere: episodes, claims, goals, decisions, personal model and evolution">
 </p>
 
 | Perspective | The question it explores |
@@ -125,7 +127,16 @@ Six connected research perspectives extend this foundation.
 
 The current product includes structured records, provenance, versions, Wiki views and graph projections. Deeper personal models, complex relationships and cross-device projections remain research directions to validate through use.
 
+<details>
+<summary>Explore the English website structure concept</summary>
+
+![English website concept explorer: objects, evidence, relations, time and authority](docs/media/website-structure-explorer.jpg)
+
+</details>
+
 ## Memory under your control
+
+![English website concept: an independent memory core and selective boundaries](docs/media/website-sovereignty.jpg)
 
 ![Inspect, authorize and carry your memory forward](docs/media/memory-control.png)
 
@@ -182,6 +193,8 @@ Glasses are another promising entry point. An Even Hub application could use a p
 
 AI will span many platforms and devices. We want a conversation on a phone to continue on a computer or glasses, and shared experiences to remain findable years later: a familiar companion that moves across models and devices, closer to a Jarvis in everyday life.
 
+![The English website long-term vision](docs/media/website-vision.jpg)
+
 ## Build it with us
 
 Nova Memory is created and maintained by Evan as Atom Awareness's second product line. Developers, researchers and investors working on personal memory, agents and wearables are welcome to connect.
@@ -192,7 +205,7 @@ Nova Memory is created and maintained by Evan as Atom Awareness's second product
 
 Local-product code is licensed under [AGPL-3.0-only](LICENSE). Dependencies retain their licenses. See [LICENSE_SCOPE.md](LICENSE_SCOPE.md) for the software scope, branding and corresponding-source delivery.
 
-Website imagery comes from the [Nova Memory website](https://nova-memory.atom-evan001.chatgpt.site/), whose current entry may require access permission. The hero uses an English local render of the same website source. Other visuals are English mechanism diagrams; the sphere uses the architecture illustration's conceptual geometry, rather than a live Vault projection.
+Website imagery comes from the [Nova Memory website](https://nova-memory.atom-evan001.chatgpt.site/), whose current entry may require access permission. Website sections and the sphere animation are local renders of its existing English interface. The architecture animation and layer diagrams explain mechanisms. Geometric connections are not evidence of actual semantic relationships in a Vault.
 
 ---
 

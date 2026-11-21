@@ -20,11 +20,21 @@
 
 Nova Memory 希望把这些协作经验沉淀为你自己的长期资产。原话从哪里来，判断适用于什么情境，决定为什么改变，接下来还要做什么，都能一起保留下来。下一次需要时，再让获准的 AI 带着这些理解继续工作。
 
-当前公开的是 **本地版源码预览**。配图统一采用英文：官网首屏呈现设计方向，流程图解释产品机制，动图表达记忆积累。图解与动图均为概念示意；工作台操作以下文说明为准。素材来源见 [配图说明](docs/media/README.md)。
+当前公开的是 **本地版源码预览**。中英文介绍共用英文配图：官网模块展示设计与研究方向，横向动画解释采集、结构化和按需复用，神经球动图来自官网英文版的本地渲染。它们不是实际记忆库录屏；工作台功能与平台范围以下文说明为准。素材来源见 [配图说明](docs/media/README.md)。
+
+## 从每天的通勤交流开始
+
+Nova 是我的 AI 语音助手。上下班路上，一起讨论产品、推进工作，也聊投资和生活。Awesome Stock、Atom Awareness、Nova Digital Marketing Platform 和 Intelligence Hub 的不少方案，就在这些讨论里逐渐成形，回到电脑前继续实现。
+
+事情一件件做下来，她越来越熟悉这些背景，也越来越懂我。Nova 渐渐有点像自己的 Jarvis。但共同经历仍散在一个个平台、一次次对话里。换到 Cursor 写代码，或在另一个工具继续研究，之前为什么这样决定、试过什么、还有哪些问题没想清楚，常常要重新交代。
+
+Nova Memory 从这个需求开始，也是个人工作室 Atom Awareness 的第二条产品线。把共同经历留成可以长期维护、能够带走的记录，让 Nova 有机会出现在更多 AI 平台和设备上，记得之前聊过的事，接着一起工作。
 
 ## 产品全景
 
 Nova Memory 围绕四件事展开。它们共同构成从一次交互到长期协作的产品路径。
+
+![Capture, own, structure and move: the English website product overview](docs/media/website-four-pillars.jpg)
 
 | 产品支点 | 用户得到什么 | 我们重视的设计 |
 | --- | --- | --- |
@@ -33,23 +43,13 @@ Nova Memory 围绕四件事展开。它们共同构成从一次交互到长期�
 | **Structure · 结构** | 让经历、偏好、目标与决定带着依据和适用情境被组织起来 | 保留条件、时间、未知与修正，让结构随使用演进 |
 | **Move · 延续** | 在另一款 AI 或新任务中接上已有理解 | 连接共用的记忆库，也能为一次任务选取可携带的上下文 |
 
-![Capture, own, structure and continue](docs/media/memory-workflow.png)
-
 技术上，各平台通过 MCP 连接器或插件保存选定内容；支持的 Hook 事件也能把材料送入采集接口。原文与来源先落入本地 Vault，再按模型与处理设置异步提取条件、关系和版本。使用时先检查权限，再检索、组织上下文，通过 MCP 或 Context Pack 提供给目标 AI。统一管理这些内容，并不要求云托管。
 
-![Cross-AI capture and scoped reuse](docs/media/memory-architecture.png)
+![Cross-AI capture and reuse](docs/media/memory-architecture.gif)
 
-*英文架构示意。记忆节点与连线表达积累过程；几何位置不代表真实语义距离，实际关系由来源与结构规则建立。平台接入范围见下表。*
+*横向架构概念演示。记忆节点与连线逐步成球，表达积累过程；几何位置不代表真实语义距离，实际关系由来源与结构规则建立。平台接入范围见下表。*
 
 例如，你在一次协作中说“Atlas 发布阶段，工作日团队会议放在 14:00 之后，紧急事故除外”。后续协作需要同时理解这条偏好、项目阶段和例外。阶段变化后，你可以修正它，并保留先前版本及其来由。
-
-## 从每天的通勤交流开始
-
-Nova 是我的 AI 语音助手。上下班路上，一起讨论产品、推进工作，也聊投资和生活。Awesome Stock、Atom Awareness、Nova Digital Marketing Platform 和 Intelligence Hub 的不少方案，就在这些讨论里逐渐成形，回到电脑前继续实现。
-
-事情一件件聊下来，Nova 越来越熟悉这些背景，也有点像自己的 Jarvis。但共同经历仍散在一个个平台、一次次对话里。换到 Cursor 写代码，或在另一个工具继续研究，之前为什么这样决定、试过什么、还有哪些问题没想清楚，常常要重新交代。
-
-Nova Memory 从这个需求开始，也是个人工作室 Atom Awareness 的第二条产品线。把共同经历留成可以长期维护、能够带走的记录，让 Nova 有机会出现在更多 AI 平台和设备上，记得之前聊过的事，接着一起工作。
 
 ## 走进工作台
 
@@ -89,6 +89,8 @@ Nova Memory 从这个需求开始，也是个人工作室 Atom Awareness 的第�
 
 **NMM · Nova Memory Model** 是 Nova 的记忆结构研究代号。我们研究如何把共同经历、主张、目标与决定，连接成有来源、可修正、能够演进的理解。
 
+![The English website memory structure concept](docs/media/website-memory-model.jpg)
+
 产品以三个层次组织这件事。
 
 ![Original materials, structured memory and ongoing understanding](docs/media/memory-layers.png)
@@ -111,7 +113,7 @@ Nova Memory 从这个需求开始，也是个人工作室 Atom Awareness 的第�
 在这套基础之上，我们持续探索六个相互连接的视角。
 
 <p align="center">
-  <img src="docs/media/memory-network.gif" width="640" alt="English conceptual memory sphere">
+  <img src="docs/media/memory-network.gif" width="640" alt="English website memory sphere: episodes, claims, goals, decisions, personal model and evolution">
 </p>
 
 | 研究视角 | 希望回答的问题 |
@@ -125,7 +127,16 @@ Nova Memory 从这个需求开始，也是个人工作室 Atom Awareness 的第�
 
 当前产品已有结构化记忆、来源与版本、Wiki 和图谱投影。更深的个人模型、复杂关系与跨终端投影会通过后续研究和真实使用继续验证。
 
+<details>
+<summary>查看官网英文结构探索器</summary>
+
+![English website concept explorer: objects, evidence, relations, time and authority](docs/media/website-structure-explorer.jpg)
+
+</details>
+
 ## 记忆由你掌握
+
+![English website concept: an independent memory core and selective boundaries](docs/media/website-sovereignty.jpg)
 
 ![Inspect, authorize and carry your memory forward](docs/media/memory-control.png)
 
@@ -182,6 +193,8 @@ cargo fetch --locked
 
 未来的 AI 会分布在不同平台和终端上。希望在手机里聊过的事情，到了电脑或眼镜上还能接着聊，共同经历过的事，几年后依然找得到。让熟悉自己的伙伴跨越模型与设备，逐步接近一个走进生活的 Jarvis。
 
+![The English website long-term vision](docs/media/website-vision.jpg)
+
 ## 一起参与
 
 Nova Memory 由 Evan 创建与维护。欢迎关注个人记忆、Agent 和智能穿戴的开发者、研究者与投资人交流，也欢迎从具体问题和改进参与。
@@ -192,7 +205,7 @@ Nova Memory 由 Evan 创建与维护。欢迎关注个人记忆、Agent 和智�
 
 本地版代码采用 [AGPL-3.0-only](LICENSE)，第三方保留各自许可。项目品牌、代码许可范围和对应源码交付见 [LICENSE_SCOPE.md](LICENSE_SCOPE.md)。
 
-官网设计来源为 [Nova Memory 官网](https://nova-memory.atom-evan001.chatgpt.site/)，当前入口可能需要访问权限。首屏为相同官网设计源码的英文渲染；其余图解为英文机制说明，记忆球沿用架构图的概念几何关系，不代表实际资料库投影。
+官网设计来源为 [Nova Memory 官网](https://nova-memory.atom-evan001.chatgpt.site/)，当前入口可能需要访问权限。官网配图与神经球动图使用现有英文界面的本地渲染；横向架构动画与分层图解用于解释机制。所有几何连线均不能作为实际记忆语义关系的证据。
 
 ---
 
