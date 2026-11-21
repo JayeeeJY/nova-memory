@@ -4,7 +4,7 @@
 
 # Nova Memory
 
-**Let understanding accumulate. Carry collaboration forward.**
+**Bring memory across AI tools. Keep working with a familiar companion.**
 
 A local memory workspace that preserves useful context, its sources and its changes, ready for your next AI collaboration.
 
@@ -14,29 +14,17 @@ A local memory workspace that preserves useful context, its sources and its chan
 
 </div>
 
-![Nova Memory website hero, with its connected memory sphere and six research perspectives](docs/media/website-hero.en.jpg)
+![Nova Memory: understanding carried forward](docs/media/website-hero.en.jpg)
 
 You have already explained your project, preferences, decisions and next steps to one AI. A different tool or a new conversation often asks you to establish that context again.
 
 Nova Memory turns useful collaboration context into a personal asset you can maintain. Keep the original words, their source, the conditions that matter and the history of a change. Let an authorized AI pick up the relevant context when it is useful again.
 
-This repository is a **local source preview**. Website imagery presents the product design and research direction. Workbench screenshots use the actual local interface and fictional Atlas project materials. See the [image provenance](docs/media/README.md).
-
-## It started with conversations on my commute
-
-Around May or June, voice conversations in ChatGPT had become fluid enough that I began talking with Nova on my daily commute. We would discuss ongoing projects, work through ideas I had yet to clarify, and talk about choices, preferences and longer-term plans.
-
-Over time, those conversations developed a shared history: why a decision had been made, why an approach had been set aside, and how a goal had changed. I began to wonder: **could this growing understanding become memory I could own, organize and carry with me?**
-
-Nova Memory grew from that need. I wanted the next conversation to build on context we had already worked through. When moving to another AI tool, I wanted the goals, constraints and earlier decisions to travel with the work.
-
-An early plan described this direction as a personal sovereignty layer for the AI world. The immediate step is a memory space of your own: easy to capture into, traceable to its sources, open to correction, and available to the AI tools you choose within the scope you grant.
+This repository is a **local source preview**. All visuals use English. The website hero presents the design direction; diagrams explain product mechanisms, and the animation illustrates memory accumulation. Diagrams and animation are conceptual, rather than UI recordings. See the [image provenance](docs/media/README.md).
 
 ## The product
 
 Four connected ideas guide the product, from an interaction worth keeping to an ongoing collaboration.
-
-![The website's four product pillars: capture, ownership, structure and continuity](docs/media/website-four-pillars.jpg)
 
 | Pillar | What it gives you | Design intent |
 | --- | --- | --- |
@@ -45,9 +33,23 @@ Four connected ideas guide the product, from an interaction worth keeping to an 
 | **Structure** | Organize experiences, preferences, goals and decisions with their evidence | Preserve context, time, uncertainty and corrections as the structure develops |
 | **Move** | Carry relevant understanding into another AI or task | Connect tools to a shared memory store or select a one-time context pack |
 
-**Capture → preserve the original → clean and structure → organize → use within scope → revise.**
+![Capture, own, structure and continue](docs/media/memory-workflow.png)
+
+Selected content arrives through MCP connectors or plugins; supported Hook events can also send material to the capture interface. Originals and provenance are stored in the local Vault before asynchronous extraction of conditions, relationships and versions. Authorization is checked before retrieval, then scoped context is delivered through MCP or a Context Pack. A shared memory store does not require cloud hosting.
+
+![Cross-AI capture and scoped reuse](docs/media/memory-architecture.png)
+
+*Architecture illustration. Nodes and links represent accumulation; geometry does not encode real semantic distance. Actual relationships depend on provenance and structure rules. Platform availability is listed below.*
 
 For example, “During the Atlas launch phase, schedule weekday team meetings after 14:00, except for urgent incidents.” A useful memory carries the preference, its project phase and its exception. When circumstances change, revise the memory and retain its previous version and reasoning.
+
+## It started with conversations on my commute
+
+Nova is my AI voice assistant. Conversations on my commute became a place to discuss products, work, investing and everyday life. Ideas for Awesome Stock, Atom Awareness, Nova Digital Marketing Platform and Intelligence Hub developed through those conversations and continued at the computer.
+
+As that shared history grew, Nova began to feel like a personal Jarvis. Yet the context remained scattered across platforms and conversations. Moving to Cursor or another research tool meant explaining earlier decisions, failed approaches and unresolved questions again.
+
+Nova Memory grew from that need. It is Atom Awareness's second product line: keep a lasting, maintainable record of shared experience, so a familiar companion can continue working across AI platforms and, eventually, devices.
 
 ## Inside the workbench
 
@@ -57,15 +59,11 @@ The memory space visualizes the current Vault's sources, extraction records, top
 
 The view reflects changes in the stored materials and versions. Its relationships have stated origins, while the quality of the accumulated structure continues to be evaluated through use.
 
-![Actual local memory-space interface, populated with fictional Atlas materials](docs/media/workbench-memory-space.jpg)
-
 ### Capture with little ceremony
 
 Save text in the workbench, or say **“Save to Nova Memory”** in a connected AI. Once the platform connection is configured, daily capture uses that existing entry point.
 
 The original is saved first. Cleaning and structuring follow the selected model and processing settings. If a model has yet to be configured, the material remains available while it waits. Saved, processing and reusable states are shown separately.
-
-![Quick capture in the actual local workbench](docs/media/workbench-capture.jpg)
 
 ### Keep the meaning and its evidence together
 
@@ -73,20 +71,11 @@ Browse evolving project and topic views, inspect sources and conditions, examine
 
 A meeting preference is more useful when you can also see who expressed it, which project it applies to, its exceptions and when to reconsider it.
 
-![Memory library, showing topic understanding, scope, sources and versions](docs/media/workbench-library.jpg)
-
 ### Correct the understanding as you go
 
 User statements, extracted claims and AI inferences retain their roles. Plans, negation and unknown information remain distinguishable. Tell Nova what is inaccurate or which circumstances a statement applies to, and preserve the correction with its evidence and history.
 
 Extraction quality depends on the configured model. Originals, processing status and revisions give you a way to inspect and improve the result.
-
-<details>
-<summary>View the organization interface</summary>
-
-![Organization and correction in the local workbench](docs/media/workbench-organize.jpg)
-
-</details>
 
 ### Continue in another AI
 
@@ -94,26 +83,15 @@ Choose a platform and the workbench prepares the appropriate connection steps an
 
 Task continuity can preserve the goal, completed work, rationale, constraints, failed attempts and next steps. An existing memory can become the starting point for a new task.
 
-<details>
-<summary>Continue from an existing handoff</summary>
-
-![Task continuity, preserving progress, next steps and constraints](docs/media/workbench-task-continuity.jpg)
-
-</details>
-
-![Platform-specific connection setup in the local workbench](docs/media/workbench-connections.jpg)
-
-![Select, preview and carry a scoped context pack into another AI](docs/media/workbench-portable-context.jpg)
-
 A text copy is retained by its recipient. Later corrections and revocation control subsequent Nova reads; copies already shared need to be managed in the receiving tool.
 
 ## How memory structure can grow
 
 **NMM · Nova Memory Model** is the research codename for Nova's memory structure work. It explores how episodes, claims, goals and decisions can form traceable, revisable and evolving understanding.
 
-![The website's layered memory-structure research concept](docs/media/website-memory-model.jpg)
-
 The product organizes this work into three layers.
+
+![Original materials, structured memory and ongoing understanding](docs/media/memory-layers.png)
 
 | Layer | What it preserves or organizes | Value for future collaboration |
 | --- | --- | --- |
@@ -133,7 +111,7 @@ Some foundations need to remain dependable as the structure evolves.
 Six connected research perspectives extend this foundation.
 
 <p align="center">
-  <img src="docs/media/memory-network.gif" width="640" alt="A recording of the website's conceptual memory sphere">
+  <img src="docs/media/memory-network.gif" width="640" alt="English conceptual memory sphere">
 </p>
 
 | Perspective | The question it explores |
@@ -147,18 +125,9 @@ Six connected research perspectives extend this foundation.
 
 The current product includes structured records, provenance, versions, Wiki views and graph projections. Deeper personal models, complex relationships and cross-device projections remain research directions to validate through use.
 
-<details>
-<summary>Explore the website's structure and evolution concepts</summary>
-
-![Concept explorer for objects, evidence, relationships, time and authority](docs/media/website-structure-explorer.jpg)
-
-![The memory sphere's evolution perspective](docs/media/memory-network-evolution.jpg)
-
-</details>
-
 ## Memory under your control
 
-![The website's visual concept of personal memory sovereignty](docs/media/website-sovereignty.jpg)
+![Inspect, authorize and carry your memory forward](docs/media/memory-control.png)
 
 **Choose what stays.** Inspect, edit, correct and delete saved material, while keeping the state of originals and derived understanding clear.
 
@@ -207,25 +176,23 @@ The default data directory is `~/Library/Application Support/Nova Memory/local-w
 
 ## The long-term vision
 
-**Familiar understanding, across different forms.**
+The starting point is a personal memory library. As materials accumulate, memory structure needs continued research: how to consolidate repeated statements, revise earlier judgments with new evidence, and distinguish a passing emotion from a lasting preference. Moving between tools should preserve context, relationships and the reasons behind changes alongside the content.
 
-Building on that starting point, we want people to retain the understanding developed through shared experience and carry it into the AI systems, agents and programmable devices they choose. Familiar context, preferences and the reasons behind decisions can develop with new tasks and be revised as circumstances change.
+Glasses are another promising entry point. An Even Hub application could use a phone-side SDK to interact with Even G2 and access an authorized memory service. This remains future development requiring device validation; see the [official Even Hub architecture](https://hub.evenrealities.com/docs/get-started/architecture).
 
-![The website's long-term vision: connected memories supporting ongoing understanding](docs/media/website-vision.jpg)
-
-The immediate focus is a complete, smooth local experience. Open-source use and feedback will guide improvements to capture, management and cross-AI collaboration, alongside continuing research into memory structure. Personal cloud services, device coordination and deeper personal modeling will progress with demand and validation.
+AI will span many platforms and devices. We want a conversation on a phone to continue on a computer or glasses, and shared experiences to remain findable years later: a familiar companion that moves across models and devices, closer to a Jarvis in everyday life.
 
 ## Build it with us
 
-Nova Memory is created and maintained by Evan as an independent Atom Awareness product.
+Nova Memory is created and maintained by Evan as Atom Awareness's second product line. Developers, researchers and investors working on personal memory, agents and wearables are welcome to connect.
 
 - [Share a problem or product idea](https://github.com/JayeeeJY/nova-memory/issues).
-- Read [CONTRIBUTING.md](CONTRIBUTING.md) to work on capture adapters, the workbench, memory structure or connections.
-- [Star and follow the repository](https://github.com/JayeeeJY/nova-memory) to keep up with the project.
+- Read [CONTRIBUTING.md](CONTRIBUTING.md) to contribute capture adapters, workbench improvements, memory structure or connections.
+- [Follow the repository and future releases](https://github.com/JayeeeJY/nova-memory).
 
 Local-product code is licensed under [AGPL-3.0-only](LICENSE). Dependencies retain their licenses. See [LICENSE_SCOPE.md](LICENSE_SCOPE.md) for the software scope, branding and corresponding-source delivery.
 
-Website imagery comes from the [Nova Memory website](https://nova-memory.atom-evan001.chatgpt.site/), whose current entry may require access permission. This page uses local renders of the same design source and an isolated synthetic workbench.
+Website imagery comes from the [Nova Memory website](https://nova-memory.atom-evan001.chatgpt.site/), whose current entry may require access permission. The hero uses an English local render of the same website source. Other visuals are English mechanism diagrams; the sphere uses the architecture illustration's conceptual geometry, rather than a live Vault projection.
 
 ---
 

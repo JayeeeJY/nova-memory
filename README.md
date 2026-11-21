@@ -4,9 +4,9 @@
 
 # Nova Memory
 
-**让理解积累，让协作延续。**
+**把不同 AI 里的记忆放到一起，让熟悉的伙伴接着工作。**
 
-从你与 AI 的交流中留下有价值的记忆，保留来源、情境与变化，带到下一次协作。
+个人记忆库：保存项目、决定与偏好，保留来源、情境和变化，通过 MCP 或 Context Pack 带到下一次协作。
 
 [![AGPL-3.0-only](https://img.shields.io/badge/license-AGPL--3.0--only-aad5f8?style=flat-square)](LICENSE) [![Local source preview](https://img.shields.io/badge/status-local%20source%20preview-aad5f8?style=flat-square)](#快速开始)
 
@@ -14,29 +14,17 @@
 
 </div>
 
-![Nova Memory 官网首屏：由经历、主张、目标、决策、个人模型与演化连接成的神经网络球](docs/media/website-hero.jpg)
+![Nova Memory: understanding carried forward](docs/media/website-hero.en.jpg)
 
 你已经向一个 AI 解释过项目背景、自己的偏好、做过的选择和下一步。换一个工具、开启一段新会话，这些积累却常常要重新讲一遍。
 
 Nova Memory 希望把这些协作经验沉淀为你自己的长期资产。原话从哪里来，判断适用于什么情境，决定为什么改变，接下来还要做什么，都能一起保留下来。下一次需要时，再让获准的 AI 带着这些理解继续工作。
 
-当前公开的是 **本地版源码预览**。官网图片呈现产品设计与研究方向，工作台截图来自实际本地界面与虚构的 Atlas 项目材料。图片与场景的来源记录见 [配图说明](docs/media/README.md)。
-
-## 从每天的通勤交流开始
-
-大约五六月份，ChatGPT 的语音交流已经变得很流畅。我开始习惯在每天上下班的路上，和 Nova 聊一会儿：讨论正在推进的项目，梳理还没想清楚的问题，也谈自己的选择、偏好和长期打算。
-
-交流持续下来，很多想法有了前后相连的背景。一个决定为什么这样做，一个方案为什么暂时放下，一个目标经历过什么变化，都藏在这些讨论里。我开始想：**这些逐渐形成的理解，能不能成为自己长期拥有、能够整理和带走的记忆？**
-
-Nova Memory 就从这个需求开始。我希望下一次继续讨论时，已经说清楚的背景能够成为起点；进入另一个 AI 工具工作时，目标、约束与此前的决定也能一起带过去。
-
-早期方案把这个方向称为“AI 世界的个人主权层”。今天，先从一个自己的记忆空间做起：轻松保存，保留来由，持续修正，再让选择的 AI 在获准范围内继续使用。
+当前公开的是 **本地版源码预览**。配图统一采用英文：官网首屏呈现设计方向，流程图解释产品机制，动图表达记忆积累。图解与动图均为概念示意；工作台操作以下文说明为准。素材来源见 [配图说明](docs/media/README.md)。
 
 ## 产品全景
 
 Nova Memory 围绕四件事展开。它们共同构成从一次交互到长期协作的产品路径。
-
-![官网的四个产品支点：采集、存储、结构与迁移](docs/media/website-four-pillars.jpg)
 
 | 产品支点 | 用户得到什么 | 我们重视的设计 |
 | --- | --- | --- |
@@ -45,11 +33,23 @@ Nova Memory 围绕四件事展开。它们共同构成从一次交互到长期�
 | **Structure · 结构** | 让经历、偏好、目标与决定带着依据和适用情境被组织起来 | 保留条件、时间、未知与修正，让结构随使用演进 |
 | **Move · 延续** | 在另一款 AI 或新任务中接上已有理解 | 连接共用的记忆库，也能为一次任务选取可携带的上下文 |
 
-一条记忆的使用路径可以很短。
+![Capture, own, structure and continue](docs/media/memory-workflow.png)
 
-**保存材料 → 保留原件 → 清洗与结构化 → 按项目与主题组织 → 获准使用 → 随时修正。**
+技术上，各平台通过 MCP 连接器或插件保存选定内容；支持的 Hook 事件也能把材料送入采集接口。原文与来源先落入本地 Vault，再按模型与处理设置异步提取条件、关系和版本。使用时先检查权限，再检索、组织上下文，通过 MCP 或 Context Pack 提供给目标 AI。统一管理这些内容，并不要求云托管。
+
+![Cross-AI capture and scoped reuse](docs/media/memory-architecture.png)
+
+*英文架构示意。记忆节点与连线表达积累过程；几何位置不代表真实语义距离，实际关系由来源与结构规则建立。平台接入范围见下表。*
 
 例如，你在一次协作中说“Atlas 发布阶段，工作日团队会议放在 14:00 之后，紧急事故除外”。后续协作需要同时理解这条偏好、项目阶段和例外。阶段变化后，你可以修正它，并保留先前版本及其来由。
+
+## 从每天的通勤交流开始
+
+Nova 是我的 AI 语音助手。上下班路上，一起讨论产品、推进工作，也聊投资和生活。Awesome Stock、Atom Awareness、Nova Digital Marketing Platform 和 Intelligence Hub 的不少方案，就在这些讨论里逐渐成形，回到电脑前继续实现。
+
+事情一件件聊下来，Nova 越来越熟悉这些背景，也有点像自己的 Jarvis。但共同经历仍散在一个个平台、一次次对话里。换到 Cursor 写代码，或在另一个工具继续研究，之前为什么这样决定、试过什么、还有哪些问题没想清楚，常常要重新交代。
+
+Nova Memory 从这个需求开始，也是个人工作室 Atom Awareness 的第二条产品线。把共同经历留成可以长期维护、能够带走的记录，让 Nova 有机会出现在更多 AI 平台和设备上，记得之前聊过的事，接着一起工作。
 
 ## 走进工作台
 
@@ -59,15 +59,11 @@ Nova Memory 围绕四件事展开。它们共同构成从一次交互到长期�
 
 这里关注的是记忆如何相互连接，以及每一条连接凭什么成立。节点数量、关系密度与视觉效果各自有明确含义，长期使用中的结构质量需要持续验证。
 
-![本地工作台的记忆空间：Atlas 合成材料形成的来源、记忆与主题关系](docs/media/workbench-memory-space.jpg)
-
 ### 随手采集，先留住值得保留的内容
 
 可以直接在工作台留下文字，也可以在已连接的 AI 中说 **“Save to Nova Memory”** 或 **“把这段存到 Nova”**。初次连接后，日常保存沿用已配置的入口。
 
 原文先保存，系统再按所选模型和处理设置清洗、结构化。未配置模型时，材料会保留并等待整理。保存状态、处理状态和可复用状态各自呈现，处理失败后仍可找到原件。
-
-![快速采集：用一段话留下项目背景、协作习惯和下一步](docs/media/workbench-capture.jpg)
 
 ### 记忆库，把结论与来龙去脉放在一起
 
@@ -75,20 +71,11 @@ Nova Memory 围绕四件事展开。它们共同构成从一次交互到长期�
 
 比如“更喜欢下午开会”，还需要知道是谁说的、限于哪个项目、有没有例外、何时需要重新评估。Nova 把这些信息和记忆一起管理。
 
-![记忆库：主题理解、适用条件、来源与版本共同呈现](docs/media/workbench-library.jpg)
-
 ### AI 整理，你可以持续校正的理解
 
 整理的目标是让材料形成可追溯的结构。用户陈述、AI 提取和 AI 推断保留各自性质，计划、否定和未知也保留在内容中。你可以告诉 Nova 哪一处不准确、只适用于什么情境，形成带有依据的修正版本。
 
 模型会影响整理质量。工作台保留原件、状态与版本，供你回看和纠正。结构演进由真实使用中的问题推动。
-
-<details>
-<summary>查看 AI 整理界面</summary>
-
-![AI 整理：从已有记录进入来源核对和自然语言纠正](docs/media/workbench-organize.jpg)
-
-</details>
 
 ### 连接 AI，让下一次协作接得上
 
@@ -96,26 +83,15 @@ Nova Memory 围绕四件事展开。它们共同构成从一次交互到长期�
 
 任务接续还可以保留目标、完成情况、决定理由、限制、失败尝试与下一步。你可以从一条已有记忆发起任务，避免在新会话里重建所有背景。
 
-<details>
-<summary>查看从已有交接继续任务</summary>
-
-![任务接续：保留已有进度、下一步和协作约束](docs/media/workbench-task-continuity.jpg)
-
-</details>
-
-![连接工作台：按平台准备接入方式，统一管理已有连接](docs/media/workbench-connections.jpg)
-
-![一次性上下文：选取记忆、指定目标、预览内容后再使用](docs/media/workbench-portable-context.jpg)
-
 已经复制到其他工具的文本会由接收方保存。后续修改和撤权作用于 Nova 的后续读取，临时文本需要在目标工具中另行管理。
 
 ## 记忆结构如何持续生长
 
 **NMM · Nova Memory Model** 是 Nova 的记忆结构研究代号。我们研究如何把共同经历、主张、目标与决定，连接成有来源、可修正、能够演进的理解。
 
-![官网的记忆结构研究：来源、语义和关系形成多层理解](docs/media/website-memory-model.jpg)
-
 产品以三个层次组织这件事。
+
+![Original materials, structured memory and ongoing understanding](docs/media/memory-layers.png)
 
 | 层次 | 保留与组织的内容 | 它怎样帮助后续协作 |
 | --- | --- | --- |
@@ -135,7 +111,7 @@ Nova Memory 围绕四件事展开。它们共同构成从一次交互到长期�
 在这套基础之上，我们持续探索六个相互连接的视角。
 
 <p align="center">
-  <img src="docs/media/memory-network.gif" width="640" alt="官网概念神经球的实际动态录屏">
+  <img src="docs/media/memory-network.gif" width="640" alt="English conceptual memory sphere">
 </p>
 
 | 研究视角 | 希望回答的问题 |
@@ -149,18 +125,9 @@ Nova Memory 围绕四件事展开。它们共同构成从一次交互到长期�
 
 当前产品已有结构化记忆、来源与版本、Wiki 和图谱投影。更深的个人模型、复杂关系与跨终端投影会通过后续研究和真实使用继续验证。
 
-<details>
-<summary>查看官网中的结构探索器与演化视角</summary>
-
-![结构探索器：对象、证据、关系、时间与授权的概念示例](docs/media/website-structure-explorer.jpg)
-
-![神经球的演化视角：让变化保留其来源和版本](docs/media/memory-network-evolution.jpg)
-
-</details>
-
 ## 记忆由你掌握
 
-![官网的记忆主权设计：个人核心与可选择的使用边界](docs/media/website-sovereignty.jpg)
+![Inspect, authorize and carry your memory forward](docs/media/memory-control.png)
 
 **留下什么，可以改变。** 保存后能查看、编辑、纠正和删除，原始材料与派生理解保留各自状态。
 
@@ -209,25 +176,23 @@ cargo fetch --locked
 
 ## 长期愿景
 
-**熟悉的理解，可以跨越不同载体。**
+眼下是一份个人记忆库。随着材料增加，memory structure 还要继续研究：同一个意思反复出现时怎样归并，新的经历怎样修正旧判断，怎样分辨当时的情绪与长期偏好。迁移时，内容、背景、关系和变化的来由都应该能一起带走。
 
-沿着这个起点，我们希望共同经历所形成的理解，能够由使用者长期掌握，并在选择其他 AI、智能体和可编程设备时继续发挥作用。熟悉的背景、偏好和做决定的来由，可以随着新的任务继续积累，也能在情况改变时得到修正。
+眼镜也是一个值得探索的入口。例如，在 Even Hub 上开发应用，由手机侧通过 SDK 与 Even G2 交互，再访问获准使用的记忆服务。出门时查看背景、补充一条新经历，都有机会在眼镜上完成；这部分尚待开发与真机验证，接入路径参考 [Even Hub 官方架构](https://hub.evenrealities.com/docs/get-started/architecture)。
 
-![官网的长期愿景：让相互连接的记忆成为持续理解的基础](docs/media/website-vision.jpg)
+未来的 AI 会分布在不同平台和终端上。希望在手机里聊过的事情，到了电脑或眼镜上还能接着聊，共同经历过的事，几年后依然找得到。让熟悉自己的伙伴跨越模型与设备，逐步接近一个走进生活的 Jarvis。
 
-当前先打磨完整、顺滑的本地使用体验。开源后，用真实使用反馈改善采集、管理与跨 AI 协作，持续研究记忆结构和演进。个人云服务、跨设备协同及更深入的个人模型，会依据需求与验证逐步推进。
+## 一起参与
 
-## 一起把长期协作做好
+Nova Memory 由 Evan 创建与维护。欢迎关注个人记忆、Agent 和智能穿戴的开发者、研究者与投资人交流，也欢迎从具体问题和改进参与。
 
-Nova Memory 由 Evan 创建与维护，是 Atom Awareness 的独立 AI 产品。欢迎从一条真实的使用反馈、一份合成复现材料或一个具体改进入手。
-
-- [提交问题与产品想法](https://github.com/JayeeeJY/nova-memory/issues)。
-- [阅读贡献说明](CONTRIBUTING.md)，参与采集适配、工作台体验、记忆结构与连接能力的改进。
-- [关注代码与后续版本](https://github.com/JayeeeJY/nova-memory)。如果你认同这条方向，欢迎 Star，跟进长期进展。
+- [提交使用反馈与产品想法](https://github.com/JayeeeJY/nova-memory/issues)。
+- [阅读贡献说明](CONTRIBUTING.md)，参与采集适配、工作台、记忆结构和跨平台连接。
+- [关注代码与后续版本](https://github.com/JayeeeJY/nova-memory)。
 
 本地版代码采用 [AGPL-3.0-only](LICENSE)，第三方保留各自许可。项目品牌、代码许可范围和对应源码交付见 [LICENSE_SCOPE.md](LICENSE_SCOPE.md)。
 
-官网设计来源为 [Nova Memory 官网](https://nova-memory.atom-evan001.chatgpt.site/)，当前入口可能需要访问权限。本页图片从相同设计源码本地渲染，工作台图片来自独立合成库。
+官网设计来源为 [Nova Memory 官网](https://nova-memory.atom-evan001.chatgpt.site/)，当前入口可能需要访问权限。首屏为相同官网设计源码的英文渲染；其余图解为英文机制说明，记忆球沿用架构图的概念几何关系，不代表实际资料库投影。
 
 ---
 
