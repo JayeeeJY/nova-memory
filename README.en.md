@@ -4,6 +4,10 @@
 
 # Nova Memory
 
+<!-- nova-product-version --> **v0.1.0 · Local source preview**
+
+[Changelog](CHANGELOG.md) · [Versioning](docs/VERSIONING.md)
+
 **Bring memory across AI tools. Keep working with a familiar companion.**
 
 A local memory workspace that preserves useful context, its sources and its changes, ready for your next AI collaboration.

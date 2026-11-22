@@ -25,7 +25,7 @@ class LocalPackageTests(unittest.TestCase):
         (self.repo / "target/debug").mkdir(parents=True)
         (self.repo / "target/release").mkdir()
         (self.repo / "scripts").mkdir()
-        (self.repo / "Cargo.toml").write_text('[workspace.package]\nversion = "0.1.0"\n')
+        (self.repo / "Cargo.toml").write_text('[workspace.package]\nversion = "' + PACKAGE.CARGO_VERSION + '"\n')
         for profile in ("debug", "release"):
             for binary in ("nova-review", "nova-local-init", "nova-local", "nova-capture-hook", "nova-memory-connect"):
                 path = self.repo / "target" / profile / binary

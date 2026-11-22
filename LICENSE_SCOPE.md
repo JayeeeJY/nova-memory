@@ -25,6 +25,8 @@ the following paths, subject to any retained third-party notices.
 - The local-product source preview README, Cargo manifests, lockfile and build
   configuration supplied with that source preview.
 - `CONTRIBUTING.md` and `.github/ISSUE_TEMPLATE/bug_report.yml`.
+- `VERSION`, `CHANGELOG.md`, `docs/VERSIONING.md`, `scripts/version.py`,
+  `scripts/tests/test_product_version.py` and `.github/workflows/version.yml`.
 
 Existing author and copyright notices remain in effect. Original project
 contributions belong to their respective copyright holders. This declaration

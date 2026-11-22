@@ -15,7 +15,7 @@ import tarfile
 
 SCHEMA_VERSION = "nova.local-bundle.v0.3"
 LEGACY_SCHEMA_VERSION = "nova.local-bundle.v0.2"
-CARGO_VERSION = "0.1.0"
+CARGO_VERSION = (Path(__file__).resolve().parents[1] / "VERSION").read_text(encoding="utf-8").strip()
 COMMANDS = {
     "启动 Nova Memory.command": "launch",
     "停止 Nova Memory.command": "stop",

@@ -4,6 +4,10 @@
 
 # Nova Memory
 
+<!-- nova-product-version --> **v0.1.0 · Local source preview**
+
+[Changelog](CHANGELOG.md) · [Versioning](docs/VERSIONING.md)
+
 **把不同 AI 里的记忆放到一起，让熟悉的伙伴接着工作。**
 
 个人记忆库：保存项目、决定与偏好，保留来源、情境和变化，通过 MCP 或 Context Pack 带到下一次协作。
