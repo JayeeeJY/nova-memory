@@ -16,6 +16,8 @@ jobs:
           python-version: '3.11'
       - name: Verify version metadata and changelog
         run: python3 scripts/version.py check
+      - name: Check multilingual documentation links
+        run: python3 scripts/check_docs_languages.py
       - name: Test version changes and downgrade protection
         run: python3 -m unittest discover -s scripts/tests -p test_product_version.py
       - name: Verify tagged version

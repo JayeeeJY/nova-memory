@@ -8,13 +8,17 @@
 
 [Changelog](CHANGELOG.md) · [Versioning](docs/VERSIONING.md)
 
+English · [简体中文](README.zh-Hans.md) · [繁體中文](README.zh-Hant.md) · [日本語](README.ja.md)
+
 **Bring memory across AI tools. Keep working with a familiar companion.**
 
-A local memory workspace that preserves useful context, its sources and its changes, ready for your next AI collaboration.
+Save project context you may need again, with its sources, the conditions it applies to, and later corrections. Reuse it in the next collaboration you authorize.
+
+This v0.1.0 line is a local source preview for Apple Silicon Macs. Build it locally before opening the app. Signing, notarization and cross-device installer validation are still being prepared, and the current desktop controls may be in Chinese. A version or GitHub release names this preview; it is not itself a signed installer or a completed real-world acceptance. [Get started](#get-started)
 
 [![AGPL-3.0-only](https://img.shields.io/badge/license-AGPL--3.0--only-aad5f8?style=flat-square)](LICENSE) [![Local source preview](https://img.shields.io/badge/status-local%20source%20preview-aad5f8?style=flat-square)](#get-started)
 
-[Origins](#it-started-with-conversations-on-my-commute) · [Product](#the-product) · [Workbench](#inside-the-workbench) · [Memory structure](#how-memory-structure-can-grow) · [Connections](#connect-the-ai-tools-you-use) · [Get started](#get-started)
+[Get started](#get-started) · [Origins](#it-started-with-conversations-on-my-commute) · [Product](#the-product) · [Workbench](#inside-the-workbench) · [Memory structure](#how-memory-structure-can-grow) · [Connections](#connect-the-ai-tools-you-use) · [Vision](#the-long-term-vision)
 
 </div>
 
@@ -24,7 +28,7 @@ You have already explained your project, preferences, decisions and next steps t
 
 Nova Memory turns useful collaboration context into a personal asset you can maintain. Keep the original words, their source, the conditions that matter and the history of a change. Let an authorized AI pick up the relevant context when it is useful again.
 
-This repository is a **local source preview**. The introduction and its visuals are presented in English. Website sections show the design and research direction; the horizontal animation explains capture, structuring and scoped reuse, while the memory-sphere animation is a local render of the English website. Neither animation is a recording of a live personal Vault. See the [image provenance](docs/media/README.md).
+The images and animations on this page are concept and design material, not a recording of a live Vault. [Image provenance](docs/media/README.md).
 
 ## It started with conversations on my commute
 
@@ -47,7 +51,9 @@ Four connected ideas guide the product, from an interaction worth keeping to an 
 | **Structure** | Organize experiences, preferences, goals and decisions with their evidence | Preserve context, time, uncertainty and corrections as the structure develops |
 | **Move** | Carry relevant understanding into another AI or task | Connect tools to a shared memory store or select a one-time context pack |
 
-Selected content arrives through MCP connectors or plugins; supported Hook events can also send material to the capture interface. Originals and provenance are stored in the local Vault before asynchronous extraction of conditions, relationships and versions. Authorization is checked before retrieval, then scoped context is delivered through MCP or a Context Pack. A shared memory store does not require cloud hosting.
+Selected content arrives through MCP connectors or plugins; supported Hook events can also send material to the capture interface. Originals and provenance are stored in the local Vault before asynchronous extraction of conditions, relationships and versions. Authorization is checked before retrieval, then scoped context is delivered through MCP or a context pack. A shared memory store does not require cloud hosting.
+
+A context pack is the one-time form of that reuse. You choose a few memories, preview the words, then copy or download them into another tool. That tool keeps the copy.
 
 ![Cross-AI capture and reuse](docs/media/memory-architecture.gif)
 
@@ -150,17 +156,18 @@ The current product includes structured records, provenance, versions, Wiki view
 
 **Carry the context with you.** Manage memory alongside its sources, structure and history, with context sharing and encrypted-backup inspection paths.
 
-The local Vault uses encrypted storage. You choose the model and processing settings. When using a remote model or AI connection, the relevant content is sent to the configured destination according to those settings.
+The local Vault uses encrypted storage. You choose the model and processing settings. Encryption on this machine does not keep selected material local once you use a remote model or a remote AI connection: the relevant content is sent to the configured destination. Revoking access stops later Nova reads. It does not bring back text already copied into another tool.
 
 ## Connect the AI tools you use
 
-The current focus is **ChatGPT, Codex, Claude, WorkBuddy, Grok and Cursor**, using MCP, platform connectors and suitable lifecycle hooks. Client variants, entry points and authentication are tracked separately.
+The current focus includes **ChatGPT, Codex, Claude Code, WorkBuddy, Grok and Cursor**, using MCP, platform connectors and suitable lifecycle hooks. These rows are not equally finished integrations. Claude chat and Claude Desktop are separate from Claude Code; a Code record does not cover them. Client, entry point and authentication stay separate, and a project record here is not an independent acceptance.
 
 | Platform | Connection path | Current evidence or setup boundary |
 | --- | --- | --- |
 | **Cursor** | Local MCP configuration, capture, retrieval and task continuity | Actual IDE new-session, correction and reauthorization records |
 | **Codex** | Explicit MCP save/read, optional CLI capture hooks | Actual CLI tool-call and Hook ingestion, replay and revocation records |
-| **Claude** | Local MCP configuration for Claude Code | Actual Code client save/read records; chat and Desktop require their own verification |
+| **Claude Code** | Local MCP configuration | Actual Code client save/read records |
+| **Claude chat / Desktop** | Not the Claude Code path | Needs its own verification; Code records do not cover chat or Desktop |
 | **WorkBuddy** | User-level MCP configuration | Actual client save/read records; project-level configuration is checked separately |
 | **ChatGPT** | Remote MCP gateway and authenticated tunnel | Requires a reachable endpoint and account-specific setup |
 | **Grok** | Custom MCP connector at grok.com | Public reachability and account authentication compatibility remain under individual verification |
@@ -183,11 +190,11 @@ cargo fetch --locked
 ./script/build_and_run.sh
 ```
 
-Open the App, start a local workspace, and save your first piece of material. Configure a model when ready, then choose an AI platform in the connections section. The current desktop controls may be displayed in Chinese.
+Open the app. The current desktop controls may be displayed in Chinese; this preview does not document a separate English control set. The labels in the getting-started guide are 「开始本地使用」 to open a local workspace, 「留住一段记忆」 to save the first material, and 「连接」 for another AI. Configure a model when you are ready. Those steps are instructions to follow, not a record of a completed Mac run.
 
 The default data directory is `~/Library/Application Support/Nova Memory/local-workspace-v03`. Original materials can be saved while model setup is pending.
 
-[Full getting-started and build guide (Chinese)](docs/GETTING_STARTED.md) · [Report an issue](https://github.com/JayeeeJY/nova-memory/issues) · [Contribute](CONTRIBUTING.md)
+[Full getting-started guide](docs/GETTING_STARTED.en.md) · [简体中文](docs/GETTING_STARTED.md) · [繁體中文](docs/GETTING_STARTED.zh-Hant.md) · [日本語](docs/GETTING_STARTED.ja.md) · [Report an issue](https://github.com/JayeeeJY/nova-memory/issues) · [Contribute](CONTRIBUTING.md)
 
 ## The long-term vision
 
@@ -209,7 +216,7 @@ Nova Memory is created and maintained by Evan as Atom Awareness's second product
 
 Local-product code is licensed under [AGPL-3.0-only](LICENSE). Dependencies retain their licenses. See [LICENSE_SCOPE.md](LICENSE_SCOPE.md) for the software scope, branding and corresponding-source delivery.
 
-Website imagery comes from the [Nova Memory website](https://nova-memory.atom-evan001.chatgpt.site/), whose current entry may require access permission. Website sections and the sphere animation are local renders of its existing English interface. The architecture animation and layer diagrams explain mechanisms. Geometric connections are not evidence of actual semantic relationships in a Vault.
+Website imagery comes from the [Nova Memory website](https://nova-memory.atom-evan001.chatgpt.site/), whose current entry may require access permission. This introduction and its visuals are in English. Website sections show the design and research direction and are local renders of the existing English interface. The horizontal animation explains capture, structuring and scoped reuse. The memory-sphere animation is a local render of that English website. Neither animation is a recording of a live personal Vault. The architecture animation and layer diagrams explain mechanisms. Geometric connections are not evidence of actual semantic relationships in a Vault. See the [image provenance](docs/media/README.md).
 
 ---
 

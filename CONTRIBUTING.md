@@ -18,7 +18,7 @@ client, version and connection mode used.
 ## Local development
 
 The source preview README describes prerequisites and the normal build entry
-point. Rust packages live under `apps/` and `crates/`; the native macOS shell is
+point. Language editions and build guides start from [README.md](README.md). Rust packages live under `apps/` and `crates/`; the native macOS shell is
 in `apps/nova-desktop/`.
 
 Use a new data directory for development. Run tests relevant to the affected

@@ -1,6 +1,10 @@
 # 使用 Nova Memory 本地版
 
-当前 GitHub 发布本地版源码。建议先在 Apple 芯片 Mac 上构建并体验，正式安装包的开发者签名、公证和换机检查继续准备。
+[English](GETTING_STARTED.en.md) · 简体中文 · [繁體中文](GETTING_STARTED.zh-Hant.md) · [日本語](GETTING_STARTED.ja.md)
+
+[产品介绍](../README.zh-Hans.md)
+
+当前 GitHub 发布的是 **v0.1.0** 本地源码预览。建议先在 Apple 芯片 Mac 上自行构建。正式安装包的开发者签名、公证和换机检查仍在准备。版本号、更新日志或 GitHub Release 只标出这次源码预览，并不等于已经提供签名安装包，也不等于真实客户端或设备验收已经完成。当前桌面控件是中文。下面的步骤是操作说明，不是一次已完成的 Mac 运行记录。
 
 ## 构建并打开
 
