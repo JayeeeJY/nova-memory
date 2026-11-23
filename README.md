@@ -4,33 +4,177 @@
 
 # Nova Memory
 
-**让理解积累，让协作延续。**
+<!-- nova-product-version --> **v0.1.0 · Local source preview**
 
-自行构建后，可在本机工作台保存协作材料，连同来源、适用情境与后来的修正，并在当前授权范围内带到下一次协作。
+[Changelog](CHANGELOG.md) · [Versioning](docs/VERSIONING.md)
 
-当前是 **Apple 芯片 Mac 的本地源码预览**，需要自行构建后打开。Mac 开发者签名、公证和跨设备发行仍在准备。
+**Bring memory across AI tools. Keep working with a familiar companion.**
 
-[![AGPL-3.0-only](https://img.shields.io/badge/license-AGPL--3.0--only-aad5f8?style=flat-square)](LICENSE) [![Local source preview](https://img.shields.io/badge/status-local%20source%20preview-aad5f8?style=flat-square)](#快速开始)
+A local memory workspace that preserves useful context, its sources and its changes, ready for your next AI collaboration.
 
-[快速开始](#快速开始) · [走进工作台](#走进工作台) · [项目起点](#从每天的通勤交流开始) · [产品全景](#产品全景) · [记忆结构](#记忆结构如何持续生长) · [接入平台](#连接你正在使用的-ai) · [长期愿景](#长期愿景) · [English](README.en.md)
+[![AGPL-3.0-only](https://img.shields.io/badge/license-AGPL--3.0--only-aad5f8?style=flat-square)](LICENSE) [![Local source preview](https://img.shields.io/badge/status-local%20source%20preview-aad5f8?style=flat-square)](#get-started)
+
+[Origins](#it-started-with-conversations-on-my-commute) · [Product](#the-product) · [Workbench](#inside-the-workbench) · [Memory structure](#how-memory-structure-can-grow) · [Connections](#connect-the-ai-tools-you-use) · [Get started](#get-started)
 
 </div>
 
-**构建条件**与下文「构建环境」以及 [完整使用与构建说明](docs/GETTING_STARTED.md) 已写明的系统及工具条件相同：
+![Nova Memory: understanding carried forward](docs/media/website-hero.en.jpg)
 
-- Apple 芯片 Mac，macOS 14 或更新版本。
-- 带 macOS SDK 的 Xcode、Rust 1.97.1、Python 3.11 或更新版本。
+You have already explained your project, preferences, decisions and next steps to one AI. A different tool or a new conversation often asks you to establish that context again.
 
-构建需要下载依赖并使用 Xcode 的命令行工具。如果系统找不到编译器，先在 Xcode 设置中确认命令行工具已安装和选定。
+Nova Memory turns useful collaboration context into a personal asset you can maintain. Keep the original words, their source, the conditions that matter and the history of a change. Let an authorized AI pick up the relevant context when it is useful again.
 
-## 快速开始
+This repository is a **local source preview**. The introduction and its visuals are presented in English. Website sections show the design and research direction; the horizontal animation explains capture, structuring and scoped reuse, while the memory-sphere animation is a local render of the English website. Neither animation is a recording of a live personal Vault. See the [image provenance](docs/media/README.md).
 
-当前 GitHub 提供本地版源码预览。Mac 开发者签名、公证和跨设备发行正在准备，源码构建可先体验产品。
+## It started with conversations on my commute
 
-**构建环境**
+Nova is my AI voice assistant. Conversations on my commute became a place to discuss products, work, investing and everyday life. Ideas for Awesome Stock, Atom Awareness, Nova AI Digital Marketing Workspace and Intelligence Hub developed through those conversations and continued at the computer.
 
-- Apple 芯片 Mac，macOS 14 或更新版本。
-- 带 macOS SDK 的 Xcode、Rust 1.97.1、Python 3.11 或更新版本。
+As we kept working together, she became more familiar with the background to these projects and choices. Nova began to feel like a personal Jarvis. Yet the context remained scattered across platforms and conversations. Moving to Cursor or another research tool meant explaining earlier decisions, failed approaches and unresolved questions again.
+
+Nova Memory grew from that need. It is Atom Awareness's second product line: keep a lasting, maintainable record of shared experience, so a familiar companion can continue working across AI platforms and, eventually, devices.
+
+## The product
+
+Four connected ideas guide the product, from an interaction worth keeping to an ongoing collaboration.
+
+![Capture, own, structure and move: the English website product overview](docs/media/website-four-pillars.jpg)
+
+| Pillar | What it gives you | Design intent |
+| --- | --- | --- |
+| **Capture** | Bring useful conversations, tasks and materials into one place | Set up a connection once, then save with a short request or a simple action |
+| **Own** | Manage memory, backups and exports in your own Vault | Make storage, processing choices and access visible and controllable |
+| **Structure** | Organize experiences, preferences, goals and decisions with their evidence | Preserve context, time, uncertainty and corrections as the structure develops |
+| **Move** | Carry relevant understanding into another AI or task | Connect tools to a shared memory store or select a one-time context pack |
+
+Selected content arrives through MCP connectors or plugins; supported Hook events can also send material to the capture interface. Originals and provenance are stored in the local Vault before asynchronous extraction of conditions, relationships and versions. Authorization is checked before retrieval, then scoped context is delivered through MCP or a Context Pack. A shared memory store does not require cloud hosting.
+
+![Cross-AI capture and reuse](docs/media/memory-architecture.gif)
+
+*Conceptual architecture animation. Nodes and links illustrate accumulation; geometry does not encode real semantic distance. Actual relationships depend on provenance and structure rules. Platform availability is listed below.*
+
+For example, “During the Atlas launch phase, schedule weekday team meetings after 14:00, except for urgent incidents.” A useful memory carries the preference, its project phase and its exception. When circumstances change, revise the memory and retain its previous version and reasoning.
+
+## Inside the workbench
+
+### See how memory connects
+
+The memory space visualizes the current Vault's sources, extraction records, topics and supported relationships. Select a node or an edge to return to its underlying object and evidence. A corresponding list provides another way to inspect the same projection.
+
+The view reflects changes in the stored materials and versions. Its relationships have stated origins, while the quality of the accumulated structure continues to be evaluated through use.
+
+### Capture with little ceremony
+
+Save text in the workbench, or say **“Save to Nova Memory”** in a connected AI. Once the platform connection is configured, daily capture uses that existing entry point.
+
+The original is saved first. Cleaning and structuring follow the selected model and processing settings. If a model has yet to be configured, the material remains available while it waits. Saved, processing and reusable states are shown separately.
+
+### Keep the meaning and its evidence together
+
+Browse evolving project and topic views, inspect sources and conditions, examine versions and select relevant memories for another task. Matching statements can be displayed together while retaining their supporting sources.
+
+A meeting preference is more useful when you can also see who expressed it, which project it applies to, its exceptions and when to reconsider it.
+
+### Correct the understanding as you go
+
+User statements, extracted claims and AI inferences retain their roles. Plans, negation and unknown information remain distinguishable. Tell Nova what is inaccurate or which circumstances a statement applies to, and preserve the correction with its evidence and history.
+
+Extraction quality depends on the configured model. Originals, processing status and revisions give you a way to inspect and improve the result.
+
+### Continue in another AI
+
+Choose a platform and the workbench prepares the appropriate connection steps and configuration. For ongoing use, authorized clients can read from the same Vault. For a temporary task, choose a few memories, preview their context and copy or download it.
+
+Task continuity can preserve the goal, completed work, rationale, constraints, failed attempts and next steps. An existing memory can become the starting point for a new task.
+
+A text copy is retained by its recipient. Later corrections and revocation control subsequent Nova reads; copies already shared need to be managed in the receiving tool.
+
+## How memory structure can grow
+
+**NMM · Nova Memory Model** is the research codename for Nova's memory structure work. It explores how episodes, claims, goals and decisions can form traceable, revisable and evolving understanding.
+
+![The English website memory structure concept](docs/media/website-memory-model.jpg)
+
+The product organizes this work into three layers.
+
+![Original materials, structured memory and ongoing understanding](docs/media/memory-layers.png)
+
+| Layer | What it preserves or organizes | Value for future collaboration |
+| --- | --- | --- |
+| **Original materials** | Original words, platform, role, time and capture records | Return to what was actually expressed |
+| **Structured memory** | Objects, statements, conditions, time, evidence and versions | Find and apply a memory in its appropriate context |
+| **Ongoing understanding** | Project and topic Wiki views, consolidation and supported relationships | Assemble scattered materials into context that can be improved |
+
+Some foundations need to remain dependable as the structure evolves.
+
+- **Provenance.** Trace a statement back to its supporting material.
+- **Context.** Retain the project, phase, exceptions and scope.
+- **Time.** Distinguish when something was recorded, when it applied and how it changed.
+- **Uncertainty.** Keep unknowns, inferences and unfinished goals identifiable.
+- **Revision.** Preserve previous versions and the reason for a correction.
+- **Use boundaries.** Evaluate the recipient and scope against the current authorization.
+
+Six connected research perspectives extend this foundation.
+
+<p align="center">
+  <img src="docs/media/memory-network.gif" width="640" alt="English website memory sphere: episodes, claims, goals, decisions, personal model and evolution">
+</p>
+
+| Perspective | The question it explores |
+| --- | --- |
+| **Episodes** | What happened, who took part and what was the original context? |
+| **Claims** | What was stated, under which conditions and with which supporting or conflicting evidence? |
+| **Goals** | What is the intended outcome, what constrains it and what establishes completion? |
+| **Decisions** | Which trade-offs were made, why and what was learned from the outcome? |
+| **Personal model** | Which preferences and collaboration patterns recur, and where are their exceptions? |
+| **Evolution** | How should new information revise earlier understanding? |
+
+The current product includes structured records, provenance, versions, Wiki views and graph projections. Deeper personal models, complex relationships and cross-device projections remain research directions to validate through use.
+
+<details>
+<summary>Explore the English website structure concept</summary>
+
+![English website concept explorer: objects, evidence, relations, time and authority](docs/media/website-structure-explorer.jpg)
+
+</details>
+
+## Memory under your control
+
+![English website concept: an independent memory core and selective boundaries](docs/media/website-sovereignty.jpg)
+
+![Inspect, authorize and carry your memory forward](docs/media/memory-control.png)
+
+**Choose what stays.** Inspect, edit, correct and delete saved material, while keeping the state of originals and derived understanding clear.
+
+**Decide who can use it.** Manage capture and reading permissions separately, inspect disclosures and revoke future access.
+
+**Carry the context with you.** Manage memory alongside its sources, structure and history, with context sharing and encrypted-backup inspection paths.
+
+The local Vault uses encrypted storage. You choose the model and processing settings. When using a remote model or AI connection, the relevant content is sent to the configured destination according to those settings.
+
+## Connect the AI tools you use
+
+The current focus is **ChatGPT, Codex, Claude, WorkBuddy, Grok and Cursor**, using MCP, platform connectors and suitable lifecycle hooks. Client variants, entry points and authentication are tracked separately.
+
+| Platform | Connection path | Current evidence or setup boundary |
+| --- | --- | --- |
+| **Cursor** | Local MCP configuration, capture, retrieval and task continuity | Actual IDE new-session, correction and reauthorization records |
+| **Codex** | Explicit MCP save/read, optional CLI capture hooks | Actual CLI tool-call and Hook ingestion, replay and revocation records |
+| **Claude** | Local MCP configuration for Claude Code | Actual Code client save/read records; chat and Desktop require their own verification |
+| **WorkBuddy** | User-level MCP configuration | Actual client save/read records; project-level configuration is checked separately |
+| **ChatGPT** | Remote MCP gateway and authenticated tunnel | Requires a reachable endpoint and account-specific setup |
+| **Grok** | Custom MCP connector at grok.com | Public reachability and account authentication compatibility remain under individual verification |
+
+The workbench supplies instructions for the selected platform. Other MCP-compatible clients can be adapted through the standard interface. Automatic capture is expanded platform by platform; Codex CLI currently has actual Hook records.
+
+## Get started
+
+The public delivery is a local source preview. Developer ID signing, notarization and cross-device installer validation are being prepared.
+
+**Build prerequisites**
+
+- Apple Silicon Mac running macOS 14 or later.
+- Xcode with the macOS SDK, Rust 1.97.1 and Python 3.11 or later.
 
 ```sh
 git clone https://github.com/JayeeeJY/nova-memory.git
@@ -39,208 +183,33 @@ cargo fetch --locked
 ./script/build_and_run.sh
 ```
 
-打开 App，点击「开始本地使用」，在「留住一段记忆」中保存一条材料。之后按需要选择整理模型，再到「连接」选择希望继续协作的 AI。
+Open the App, start a local workspace, and save your first piece of material. Configure a model when ready, then choose an AI platform in the connections section. The current desktop controls may be displayed in Chinese.
 
-默认数据目录为 `~/Library/Application Support/Nova Memory/local-workspace-v03`。模型可以稍后配置，原文先保存并等待整理。
+The default data directory is `~/Library/Application Support/Nova Memory/local-workspace-v03`. Original materials can be saved while model setup is pending.
 
-[完整使用与构建说明](docs/GETTING_STARTED.md) · [问题反馈](https://github.com/JayeeeJY/nova-memory/issues) · [参与贡献](CONTRIBUTING.md)
+[Full getting-started and build guide (Chinese)](docs/GETTING_STARTED.md) · [Report an issue](https://github.com/JayeeeJY/nova-memory/issues) · [Contribute](CONTRIBUTING.md)
 
-当前公开的是 **本地版源码预览**。官网图片呈现产品设计与研究方向，工作台截图来自实际本地界面与虚构的 Atlas 项目材料。图片与场景的来源记录见 [配图说明](docs/media/README.md)。
+## The long-term vision
 
-## 走进工作台
+The starting point is a personal memory library. As materials accumulate, memory structure needs continued research: how to consolidate repeated statements, revise earlier judgments with new evidence, and distinguish a passing emotion from a lasting preference. Moving between tools should preserve context, relationships and the reasons behind changes alongside the content.
 
-### 记忆空间，让积累变得可见
+Glasses are another promising entry point. An Even Hub application could use a phone-side SDK to interact with Even G2 and access an authorized memory service. This remains future development requiring device validation; see the [official Even Hub architecture](https://hub.evenrealities.com/docs/get-started/architecture).
 
-工作台用记忆球呈现当前库中的来源、整理记录、主题和实际关系。选择节点或关系，可以回到相应的对象与依据。新增材料、结构变化和版本修正反映在当前投影中，也有等价的列表视图可查。
+AI will span many platforms and devices. We want a conversation on a phone to continue on a computer or glasses, and shared experiences to remain findable years later: a familiar companion that moves across models and devices, closer to a Jarvis in everyday life.
 
-这里关注的是记忆如何相互连接，以及每一条连接凭什么成立。节点数量、关系密度与视觉效果各自有明确含义，长期使用中的结构质量需要持续验证。
+![The English website long-term vision](docs/media/website-vision.jpg)
 
-![本地工作台的记忆空间：Atlas 合成材料形成的来源、记忆与主题关系](docs/media/workbench-memory-space.jpg)
+## Build it with us
 
-### 随手采集，先留住值得保留的内容
+Nova Memory is created and maintained by Evan as Atom Awareness's second product line. Developers, researchers and investors working on personal memory, agents and wearables are welcome to connect.
 
-可以直接在工作台留下文字，也可以在已连接的 AI 中说 **“Save to Nova Memory”** 或 **“把这段存到 Nova”**。初次连接后，日常保存沿用已配置的入口。
+- [Share a problem or product idea](https://github.com/JayeeeJY/nova-memory/issues).
+- Read [CONTRIBUTING.md](CONTRIBUTING.md) to contribute capture adapters, workbench improvements, memory structure or connections.
+- [Follow the repository and future releases](https://github.com/JayeeeJY/nova-memory).
 
-原文先保存，系统再按所选模型和处理设置清洗、结构化。未配置模型时，材料会保留并等待整理。保存状态、处理状态和可复用状态各自呈现，处理失败后仍可找到原件。
+Local-product code is licensed under [AGPL-3.0-only](LICENSE). Dependencies retain their licenses. See [LICENSE_SCOPE.md](LICENSE_SCOPE.md) for the software scope, branding and corresponding-source delivery.
 
-![快速采集：用一段话留下项目背景、协作习惯和下一步](docs/media/workbench-capture.jpg)
-
-### 记忆库，把结论与来龙去脉放在一起
-
-从项目和主题查看持续形成的理解，展开来源与适用条件，查找旧版本，或为下一次协作选择需要的内容。相同陈述可以归并展示，多份依据继续保留。
-
-比如“更喜欢下午开会”，还需要知道是谁说的、限于哪个项目、有没有例外、何时需要重新评估。Nova 把这些信息和记忆一起管理。
-
-![记忆库：主题理解、适用条件、来源与版本共同呈现](docs/media/workbench-library.jpg)
-
-### AI 整理，你可以持续校正的理解
-
-整理的目标是让材料形成可追溯的结构。用户陈述、AI 提取和 AI 推断保留各自性质，计划、否定和未知也保留在内容中。你可以告诉 Nova 哪一处不准确、只适用于什么情境，形成带有依据的修正版本。
-
-模型会影响整理质量。工作台保留原件、状态与版本，供你回看和纠正。结构演进由真实使用中的问题推动。
-
-<details>
-<summary>查看 AI 整理界面</summary>
-
-![AI 整理：从已有记录进入来源核对和自然语言纠正](docs/media/workbench-organize.jpg)
-
-</details>
-
-### 连接 AI，让下一次协作接得上
-
-选择目标平台，Nova 准备对应的接入方式与配置。持续协作时，可以让获准的 AI 使用同一个记忆库；临时任务中，可以选取几条记忆，预览为上下文，再复制或下载带走。
-
-任务接续还可以保留目标、完成情况、决定理由、限制、失败尝试与下一步。你可以从一条已有记忆发起任务，避免在新会话里重建所有背景。
-
-<details>
-<summary>查看从已有交接继续任务</summary>
-
-![任务接续：保留已有进度、下一步和协作约束](docs/media/workbench-task-continuity.jpg)
-
-</details>
-
-![连接工作台：按平台准备接入方式，统一管理已有连接](docs/media/workbench-connections.jpg)
-
-![一次性上下文：选取记忆、指定目标、预览内容后再使用](docs/media/workbench-portable-context.jpg)
-
-已经复制到其他工具的文本会由接收方保存。后续修改和撤权作用于 Nova 的后续读取，临时文本需要在目标工具中另行管理。
-
-接下来是完整的产品介绍：由来、官网配图与全景、记忆研究、由你掌握的使用边界、平台接入和长期愿景。
-
-从你与 AI 的交流中留下有价值的记忆，保留来源、情境与变化，带到下一次协作。
-
-![Nova Memory 官网首屏：由经历、主张、目标、决策、个人模型与演化连接成的神经网络球](docs/media/website-hero.jpg)
-
-你已经向一个 AI 解释过项目背景、自己的偏好、做过的选择和下一步。换一个工具、开启一段新会话，这些积累却常常要重新讲一遍。
-
-Nova Memory 希望把这些协作经验沉淀为你自己的长期资产。原话从哪里来，判断适用于什么情境，决定为什么改变，接下来还要做什么，都能一起保留下来。下一次需要时，再让获准的 AI 带着这些理解继续工作。
-
-## 从每天的通勤交流开始
-
-大约五六月份，ChatGPT 的语音交流已经变得很流畅。我开始习惯在每天上下班的路上，和 Nova 聊一会儿：讨论正在推进的项目，梳理还没想清楚的问题，也谈自己的选择、偏好和长期打算。
-
-交流持续下来，很多想法有了前后相连的背景。一个决定为什么这样做，一个方案为什么暂时放下，一个目标经历过什么变化，都藏在这些讨论里。我开始想：**这些逐渐形成的理解，能不能成为自己长期拥有、能够整理和带走的记忆？**
-
-Nova Memory 就从这个需求开始。我希望下一次继续讨论时，已经说清楚的背景能够成为起点；进入另一个 AI 工具工作时，目标、约束与此前的决定也能一起带过去。
-
-早期方案把这个方向称为“AI 世界的个人主权层”。今天，先从一个自己的记忆空间做起：轻松保存，保留来由，持续修正，再让选择的 AI 在获准范围内继续使用。
-
-## 产品全景
-
-Nova Memory 围绕四件事展开。它们共同构成从一次交互到长期协作的产品路径。
-
-![官网的四个产品支点：采集、存储、结构与迁移](docs/media/website-four-pillars.jpg)
-
-| 产品支点 | 用户得到什么 | 我们重视的设计 |
-| --- | --- | --- |
-| **Capture · 采集** | 把对话、任务和材料中值得留下的内容收进同一处 | 配置一次，日常一句话或一次操作保存，原件先可靠落下 |
-| **Own · 存储** | 在自己的 Vault 中管理记忆、备份和导出 | 数据位置、处理方式和访问范围可见、可控 |
-| **Structure · 结构** | 让经历、偏好、目标与决定带着依据和适用情境被组织起来 | 保留条件、时间、未知与修正，让结构随使用演进 |
-| **Move · 延续** | 在另一款 AI 或新任务中接上已有理解 | 连接共用的记忆库，也能为一次任务选取可携带的上下文 |
-
-一条记忆的使用路径可以很短。
-
-**保存材料 → 保留原件 → 清洗与结构化 → 按项目与主题组织 → 获准使用 → 随时修正。**
-
-例如，你在一次协作中说“Atlas 发布阶段，工作日团队会议放在 14:00 之后，紧急事故除外”。后续协作需要同时理解这条偏好、项目阶段和例外。阶段变化后，你可以修正它，并保留先前版本及其来由。
-
-## 记忆结构如何持续生长
-
-**NMM · Nova Memory Model** 是 Nova 的记忆结构研究代号。我们研究如何把共同经历、主张、目标与决定，连接成有来源、可修正、能够演进的理解。
-
-![官网的记忆结构研究：来源、语义和关系形成多层理解](docs/media/website-memory-model.jpg)
-
-产品以三个层次组织这件事。
-
-| 层次 | 保留与组织的内容 | 它怎样帮助后续协作 |
-| --- | --- | --- |
-| **原始材料** | 原话、来源平台、角色、时间与接收记录 | 回到当时的表达，核对解释是否忠实 |
-| **结构化记忆** | 对象、陈述、条件、时间、证据和版本 | 在正确的情境中找到与使用一条记忆 |
-| **持续理解** | 围绕项目与主题形成的 Wiki、归并和关联视图 | 把分散材料组织为可以继续完善的上下文 |
-
-结构需要保留相对稳定的基础。
-
-- **来源与依据。** 一条陈述能追溯到支持它的材料。
-- **情境与条件。** 项目、阶段、例外和适用范围一起留下。
-- **时间与演进。** 记录何时出现、何时适用，以及后来怎样改变。
-- **不确定性。** 未知、推断和尚未完成的目标保持可辨认。
-- **版本与修正。** 纠正后仍能找到前一版本及修正理由。
-- **使用边界。** 每次使用的接收方和范围受到当前授权约束。
-
-在这套基础之上，我们持续探索六个相互连接的视角。
-
-<p align="center">
-  <img src="docs/media/memory-network.gif" width="640" alt="官网概念神经球的实际动态录屏">
-</p>
-
-| 研究视角 | 希望回答的问题 |
-| --- | --- |
-| **经历 Episodes** | 发生过什么，参与者是谁，原始情境是什么？ |
-| **主张 Claims** | 表达了什么，成立条件是什么，有哪些支持和反证？ |
-| **目标 Goals** | 想完成什么，受到哪些约束，怎样判断已经完成？ |
-| **决策 Decisions** | 做过哪些取舍，依据是什么，结果带来了什么经验？ |
-| **个人模型 Personal model** | 哪些偏好和协作方式反复出现，例外与反例是什么？ |
-| **演化 Evolution** | 新信息怎样修正已有理解，哪些内容仍然有效？ |
-
-当前产品已有结构化记忆、来源与版本、Wiki 和图谱投影。更深的个人模型、复杂关系与跨终端投影会通过后续研究和真实使用继续验证。
-
-<details>
-<summary>查看官网中的结构探索器与演化视角</summary>
-
-![结构探索器：对象、证据、关系、时间与授权的概念示例](docs/media/website-structure-explorer.jpg)
-
-![神经球的演化视角：让变化保留其来源和版本](docs/media/memory-network-evolution.jpg)
-
-</details>
-
-## 记忆由你掌握
-
-![官网的记忆主权设计：个人核心与可选择的使用边界](docs/media/website-sovereignty.jpg)
-
-**留下什么，可以改变。** 保存后能查看、编辑、纠正和删除，原始材料与派生理解保留各自状态。
-
-**谁能使用，由你决定。** 持续连接按选定范围读取，采集与读取权限分别管理，后续可以撤销，并查看披露记录。
-
-**积累的内容，可以带走。** 记忆与来源、结构和版本一起管理，提供上下文分享与加密备份检查等路径。
-
-本地 Vault 使用加密存储。模型及处理开关由你配置，开启整理后按当前设置处理材料。使用远程模型或远程 AI 连接时，相应内容会按设置发送至目标服务。
-
-## 连接你正在使用的 AI
-
-当前重点覆盖 **ChatGPT、Codex、Claude、WorkBuddy、Grok 与 Cursor**，以 MCP、平台连接器和适用的 Hook 组织接入。具体客户端、入口和认证方式分别适配。
-
-| 平台 | 接入与使用方式 | 当前公开版本需要了解的情况 |
-| --- | --- | --- |
-| **Cursor** | 本机 MCP 配置，保存、检索与任务接续 | 已有实际 IDE 新会话、纠正和重新授权记录 |
-| **Codex** | MCP 显式保存与读取，CLI 可选 Hook 采集 | 已有实际 CLI 工具调用及 Hook 入库、补传和撤权记录 |
-| **Claude** | Claude Code 的本机 MCP 配置 | 已有实际 Code 客户端保存与读取记录，聊天和 Desktop 入口分别核对 |
-| **WorkBuddy** | 用户级 MCP 配置 | 已有实际客户端保存与读取记录，项目级配置另行验证 |
-| **ChatGPT** | 远程 MCP 网关与认证隧道 | 需要可达的连接地址和对应账号配置 |
-| **Grok** | grok.com 的自定义 MCP 连接器 | 公网可达性与账号认证兼容继续逐项核验 |
-
-选择平台后，工作台提供相应步骤。兼容 MCP 的其他客户端也可以沿标准接口适配。自动采集按各平台的稳定事件逐项增加，当前已有 Codex CLI 的实际 Hook 记录。
-
-## 长期愿景
-
-**熟悉的理解，可以跨越不同载体。**
-
-沿着这个起点，我们希望共同经历所形成的理解，能够由使用者长期掌握，并在选择其他 AI、智能体和可编程设备时继续发挥作用。熟悉的背景、偏好和做决定的来由，可以随着新的任务继续积累，也能在情况改变时得到修正。
-
-![官网的长期愿景：让相互连接的记忆成为持续理解的基础](docs/media/website-vision.jpg)
-
-当前先打磨完整、顺滑的本地使用体验。开源后，用真实使用反馈改善采集、管理与跨 AI 协作，持续研究记忆结构和演进。个人云服务、跨设备协同及更深入的个人模型，会依据需求与验证逐步推进。
-
-## 一起把长期协作做好
-
-Nova Memory 由 Evan 创建与维护，是 Atom Awareness 的独立 AI 产品。欢迎从一条真实的使用反馈、一份合成复现材料或一个具体改进入手。
-
-- [提交问题与产品想法](https://github.com/JayeeeJY/nova-memory/issues)。
-- [阅读贡献说明](CONTRIBUTING.md)，参与采集适配、工作台体验、记忆结构与连接能力的改进。
-- [关注代码与后续版本](https://github.com/JayeeeJY/nova-memory)。如果你认同这条方向，欢迎 Star，跟进长期进展。
-
-本地版代码采用 [AGPL-3.0-only](LICENSE)，第三方保留各自许可。项目品牌、代码许可范围和对应源码交付见 [LICENSE_SCOPE.md](LICENSE_SCOPE.md)。
-
-官网设计来源为 [Nova Memory 官网](https://nova-memory.atom-evan001.chatgpt.site/)，当前入口可能需要访问权限。本页图片从相同设计源码本地渲染，工作台图片来自独立合成库。
+Website imagery comes from the [Nova Memory website](https://nova-memory.atom-evan001.chatgpt.site/), whose current entry may require access permission. Website sections and the sphere animation are local renders of its existing English interface. The architecture animation and layer diagrams explain mechanisms. Geometric connections are not evidence of actual semantic relationships in a Vault.
 
 ---
 

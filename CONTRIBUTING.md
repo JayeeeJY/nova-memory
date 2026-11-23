@@ -44,3 +44,7 @@ identify its original source, version and license in the pull request.
 
 Contributors retain their copyrights. Submitting a patch does not assign
 copyright or separately grant a proprietary relicensing right.
+
+## Versioning
+
+Product versions come from `VERSION`. Read [the version policy](docs/VERSIONING.md), add user-visible changes to `CHANGELOG.md`, and run `python3 scripts/version.py check` before preparing a release. Version metadata checks do not replace feature-specific tests or client acceptance.

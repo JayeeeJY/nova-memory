@@ -74,6 +74,7 @@ class DesktopPackageTests(unittest.TestCase):
     def test_info_plist_is_gui_app_with_fixed_identifier_and_minimum_version(self):
         directory, _ = self.build()
         info = plistlib.loads((directory / "Contents/Info.plist").read_bytes())
+        self.assertEqual(info["CFBundleShortVersionString"], PACKAGE.LOCAL.CARGO_VERSION.split("-")[0])
         self.assertEqual(info["CFBundlePackageType"], "APPL")
         self.assertEqual(info["CFBundleExecutable"], "NovaMemoryDesktop")
         self.assertEqual(info["CFBundleIdentifier"], "chat.novamemory.desktop.engineering")

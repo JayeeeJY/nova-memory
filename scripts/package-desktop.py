@@ -114,7 +114,7 @@ def info_plist():
         "CFBundleInfoDictionaryVersion": "6.0",
         "CFBundleName": "Nova Memory",
         "CFBundlePackageType": "APPL",
-        "CFBundleShortVersionString": "0.3.0",
+        "CFBundleShortVersionString": LOCAL.CARGO_VERSION.split("-")[0],
         "CFBundleVersion": "1",
         "LSMinimumSystemVersion": "14.0",
         "NSHighResolutionCapable": True,
