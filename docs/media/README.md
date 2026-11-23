@@ -1,6 +1,6 @@
 # Nova Memory showcase media / English edition
 
-Updated 2026-11-22. Both README language editions use the same English visuals.
+Updated 2026-11-23. The default GitHub introduction and its English mirror use the same English visuals.
 
 ## Website design
 

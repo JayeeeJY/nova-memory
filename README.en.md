@@ -14,7 +14,7 @@ A local memory workspace that preserves useful context, its sources and its chan
 
 [![AGPL-3.0-only](https://img.shields.io/badge/license-AGPL--3.0--only-aad5f8?style=flat-square)](LICENSE) [![Local source preview](https://img.shields.io/badge/status-local%20source%20preview-aad5f8?style=flat-square)](#get-started)
 
-[Origins](#it-started-with-conversations-on-my-commute) · [Product](#the-product) · [Workbench](#inside-the-workbench) · [Memory structure](#how-memory-structure-can-grow) · [Connections](#connect-the-ai-tools-you-use) · [Get started](#get-started) · [简体中文](README.md)
+[Origins](#it-started-with-conversations-on-my-commute) · [Product](#the-product) · [Workbench](#inside-the-workbench) · [Memory structure](#how-memory-structure-can-grow) · [Connections](#connect-the-ai-tools-you-use) · [Get started](#get-started)
 
 </div>
 
@@ -24,11 +24,11 @@ You have already explained your project, preferences, decisions and next steps t
 
 Nova Memory turns useful collaboration context into a personal asset you can maintain. Keep the original words, their source, the conditions that matter and the history of a change. Let an authorized AI pick up the relevant context when it is useful again.
 
-This repository is a **local source preview**. Both README editions use English visuals. Website sections show the design and research direction; the horizontal animation explains capture, structuring and scoped reuse, while the memory-sphere animation is a local render of the English website. Neither animation is a recording of a live personal Vault. See the [image provenance](docs/media/README.md).
+This repository is a **local source preview**. The introduction and its visuals are presented in English. Website sections show the design and research direction; the horizontal animation explains capture, structuring and scoped reuse, while the memory-sphere animation is a local render of the English website. Neither animation is a recording of a live personal Vault. See the [image provenance](docs/media/README.md).
 
 ## It started with conversations on my commute
 
-Nova is my AI voice assistant. Conversations on my commute became a place to discuss products, work, investing and everyday life. Ideas for Awesome Stock, Atom Awareness, Nova Digital Marketing Platform and Intelligence Hub developed through those conversations and continued at the computer.
+Nova is my AI voice assistant. Conversations on my commute became a place to discuss products, work, investing and everyday life. Ideas for Awesome Stock, Atom Awareness, Nova AI Digital Marketing Workspace and Intelligence Hub developed through those conversations and continued at the computer.
 
 As we kept working together, she became more familiar with the background to these projects and choices. Nova began to feel like a personal Jarvis. Yet the context remained scattered across platforms and conversations. Moving to Cursor or another research tool meant explaining earlier decisions, failed approaches and unresolved questions again.
 
@@ -183,11 +183,11 @@ cargo fetch --locked
 ./script/build_and_run.sh
 ```
 
-Open the App, choose **开始本地使用**, and save a material with **留住一段记忆**. Configure a model when ready, then choose an AI platform in **连接**.
+Open the App, start a local workspace, and save your first piece of material. Configure a model when ready, then choose an AI platform in the connections section. The current desktop controls may be displayed in Chinese.
 
 The default data directory is `~/Library/Application Support/Nova Memory/local-workspace-v03`. Original materials can be saved while model setup is pending.
 
-[Full getting-started and build guide (中文)](docs/GETTING_STARTED.md) · [Report an issue](https://github.com/JayeeeJY/nova-memory/issues) · [Contribute](CONTRIBUTING.md)
+[Full getting-started and build guide (Chinese)](docs/GETTING_STARTED.md) · [Report an issue](https://github.com/JayeeeJY/nova-memory/issues) · [Contribute](CONTRIBUTING.md)
 
 ## The long-term vision
 
